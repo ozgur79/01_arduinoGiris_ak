@@ -6,7 +6,8 @@ unite: 0-LED
 kazanimlar:
   - cpp.setup-loop
   - cpp.delay
-  - cpp.pinmode-digitalwrite
+  - cpp.pinmode
+  - cpp.digitalwrite
   - cpp.blok-noktalivirgul
   - hw.harici-led-devre
 kara_kutu: [void, OUTPUT]

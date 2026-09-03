@@ -6,7 +6,8 @@ unite: 0-LED
 kazanimlar:
   - cpp.setup-loop
   - cpp.delay
-  - cpp.pinmode-digitalwrite
+  - cpp.pinmode
+  - cpp.digitalwrite
   - hw.dahili-led
 kara_kutu: [void, "{ }", ";", OUTPUT]
 malzeme:

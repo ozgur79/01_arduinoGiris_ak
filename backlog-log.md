@@ -25,6 +25,13 @@ Append-only. Hiçbir şey silinmez.
      pin 9'a taşı, kodda neyi değiştirmen gerekiyor" — kod ile devrenin birlikte
      tutması gerektiğini öğretiyor. (.ino, ders.md §9, cozumler/)
   3. ders.md §6'da `delay(500)` yazıyordu, derste `delay(1000)` var — düzeltildi.
+- **Kazanım id bölünmesi yapıldı:** `cpp.pinmode-digitalwrite` → `cpp.pinmode` +
+  `cpp.digitalwrite`. Uno'da ikisi hep birlikte geldiği için tek id yazılmıştı; Deneyap
+  Mini v2'de dahili RGB LED dersi `pinMode` kullanıyor ama eylem `neopixelWrite`, yani
+  `digitalWrite` ilk kez harici LED dersinde geçiyor. Tek id kalsaydı bu fark port
+  sırasında hiç görünmezdi. Dokunulan yerler: `kazanimlar.md` (bir satır iki oldu,
+  gerekçe dosyaya yazıldı), `ak0010_dahiliLed/ders.md` ve `ak0020_hariciLed/ders.md`
+  frontmatter'ları. Ortak uyguladı, Özgür'ün isteğiyle.
 - **Ortak'tan iki kural düzeltmesi (ak'nin hatası değil):** Karar 11'in §5 kuralı fazla
   katıydı, "birebir aynı" yerine "her kod satırını kapsayan, `.ino` yorumuyla
   çelişmeyen" oldu — ak'nin uygulaması doğruydu, dosyalar değişmedi. Karar 12'de
