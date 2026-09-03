@@ -8,7 +8,7 @@
 
   Şimdilik kara kutu (sonra açacağız):
     void    -> "fonksiyon" konusunda açılacak (temel düzeyin ilerisinde, numarası o tur belirlenecek)
-    OUTPUT  -> ak0030
+    OUTPUT  -> buton dersinde (ünite 2), INPUT ile birlikte açılacak (numarası o tur belirlenecek)
 
   kaynak: arsiv/002ledYak/002ledYak.ino
 */
@@ -32,4 +32,5 @@ void loop() {
 
 // --- SEN YAP ---
 // 1) LED'in bacaklarını yer değiştirerek tak (ters bağla). Ne oluyor, gözlemle.
-// 2) delay() sürelerini değiştirerek LED'in yanıp sönme hızını kendine göre ayarla.
+// 2) LED'in kablosunu pin 8'den pin 9'a taşı. Kodda da neyi değiştirmen gerekiyor?
+//    Değiştir ve çalıştır.

@@ -84,8 +84,8 @@ ama ışık artık kartın üzerinde değil, senin kurduğun devrede.
   tekrar dene; LED yönlü bir parçadır, ters takılırsa yanmaz.
 - **LED yanmıyor** → pin numarasının kodda (`8`) ve devrede (breadboard'daki bağlantı)
   aynı olduğundan emin ol.
-- **`delay(500)` yazıp "yarım saniye mi bekliyor" diye şüphe ediyorsan** → `delay()`
-  değeri her zaman milisaniye cinsindendir, 500 milisaniye 0.5 saniyeye eşittir.
+- **`delay(1000)` bir saniye mi, bin saniye mi diye şüphe ediyorsan** → `delay()`
+  değeri her zaman milisaniye cinsindendir, 1000 milisaniye 1 saniyeye eşittir.
 
 ## 7. Mini sınav
 1. [temel] LED'in hangi bacağı Arduino pinine, hangisi dirence bağlanır?
@@ -138,4 +138,5 @@ ama ışık artık kartın üzerinde değil, senin kurduğun devrede.
 
 ## 9. SEN YAP
 1) LED'in bacaklarını yer değiştirerek tak (ters bağla). Ne oluyor, gözlemle.
-2) delay() sürelerini değiştirerek LED'in yanıp sönme hızını kendine göre ayarla.
+2) LED'in kablosunu pin 8'den pin 9'a taşı. Kodda da neyi değiştirmen gerekiyor?
+   Değiştir ve çalıştır.

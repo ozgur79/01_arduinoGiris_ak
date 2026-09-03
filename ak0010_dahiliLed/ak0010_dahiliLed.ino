@@ -9,7 +9,7 @@
     void    -> "fonksiyon" konusunda açılacak (temel düzeyin ilerisinde, numarası o tur belirlenecek)
     { }     -> ak0020
     ;       -> ak0020
-    OUTPUT  -> ak0030
+    OUTPUT  -> buton dersinde (ünite 2), INPUT ile birlikte açılacak (numarası o tur belirlenecek)
 
   kaynak: arsiv/001dahiliLed/001dahiliLed.ino
 */

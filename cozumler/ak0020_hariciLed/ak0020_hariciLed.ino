@@ -1,16 +1,17 @@
 /*
   ak0020 — çözüm örneği
-  SEN YAP 2): delay sürelerini değiştirme örneği (1. madde fiziksel bir gözlem, kod
-  değişikliği gerektirmiyor)
+  SEN YAP 2): LED pin 8 yerine pin 9'a taşındı. Kabloyu taşımak yetmez — koddaki
+  pin numarası iki yerde birden değişmeli: pinMode() ve digitalWrite() satırlarında.
+  (1. madde fiziksel bir gözlem, kod değişikliği gerektirmiyor.)
 */
 
 void setup() {
-  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(8, HIGH);
-  delay(300);  // kısa yanma süresi
-  digitalWrite(8, LOW);
-  delay(700);  // uzun sönme süresi
+  digitalWrite(9, HIGH);
+  delay(1000);
+  digitalWrite(9, LOW);
+  delay(1000);
 }

@@ -17,7 +17,7 @@ yüzler = ünite/blok (0 = LED), onlar+birler = ders sırası.
 | void | ak0010 | belirlenmedi — "fonksiyon" konusunda açılacak, temel düzeyin ilerisinde |
 | { } | ak0010 | ak0020 |
 | ; | ak0010 | ak0020 |
-| OUTPUT | ak0010 | ak0030 |
+| OUTPUT | ak0010 | buton dersinde (ünite 2), INPUT ile birlikte — numarası o tur belirlenecek |
 
 ## Malzeme Gerekiyor (temel düzeye girmeyecek)
 (boş — motor/servo, 7 segment, mesafe sensörü, buzzer gibi dersler envanter geldikçe buraya
