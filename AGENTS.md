@@ -27,6 +27,7 @@ diğeri de **aynı oturumda** güncellenir.
 - `cozumler/` — ders çözümleri, ders klasörüyle aynı adlı alt klasörde.
 - `Test-Gunlugu.md` — her dersin fiziksel test kaydı.
 - `mufredat.md` — ders tablosu + kara kutu takip tablosu + "malzeme gerekiyor" listesi.
+- `kazanimlar.md` — kazanım id kaydı: `id | tanım | ilk öğretildiği ders`.
 
 ## Faz 1+2 — Tek proje döngüsü
 Faz 0 bitti. Her ders, Özgür'ün verdiği tek bir `arsiv/<sıraNo><isim>/` klasörü üzerinden,
@@ -65,6 +66,30 @@ taşınır. Gerekçe: zihinEv Tasarim.md Karar 9.
 kutu listesi, varsa `kaynak:`) + `--- KAVRAM ---` (kısa satır yorumları) + `--- SEN YAP ---`
 (fiziksel görev, cevapsız — cevap `cozumler/<ak no>_<isim>/` altında).
 
+## `ders.md` sidecar (her derste zorunlu)
+Her ders klasöründe `.ino`'nun yanına bir `ders.md` üretilir — amaç: dersin ileride
+Deneyap Atölyem web portalına yeniden yazılmadan taşınabilmesi. Gerekçe: zihinEv
+Tasarim.md Karar 11.
+
+- **`.ino` 5. sınıf kalır** — ileri (lise) içerik `.ino`'ya asla girmez, yalnız
+  `ders.md` içinde `[ileri]` etiketli bloklarda yaşar. Sınav soruları ve AI Yoldaşı
+  promptları tek tek `[temel]`/`[ileri]` etiketlenir.
+- **Board'a özgü her gerçek** (pin no, dahili LED API'si, mantık gerilimi, direnç
+  değeri) `ders.md` frontmatter'ındaki tek bir `board:` bloğuna hapsedilir; KAVRAM'da
+  geçen board'a özel her şey bu blokta da bulunmak zorunda.
+- **KAVRAM yorumları kendi başına anlaşılır olur** — "yukarıdaki gibi", "aynı şey",
+  "bunun tersi" gibi bağlam gerektiren ifadeler yasak; portalda satırlar tek tek
+  tıklanacak.
+- **Kazanım id'leri** (`cpp.setup-loop`, `hw.dahili-led` gibi) `kazanimlar.md`'ye
+  kaydedilir; var olan bir kavram tekrar kullanılıyorsa yeni id uydurulmaz, kayıttaki
+  kullanılır.
+- Şablonun 9 sabit başlığı: Hedef, Malzemeler, Parça tanıtımı, Devre kurulumu, Kod
+  açıklaması (+ İleri analiz [ileri]), Çalıştır ve gözlemle (+ Sorun giderme), Mini
+  sınav (en az 3 `[temel]` + 2 `[ileri]`), AI Yoldaşı promptları (en az 3, Sokratik,
+  cevap vermez), SEN YAP.
+- Faz 3'te gerçek devrede çıkan `sorun | çözüm` (Test-Gunlugu.md) ilgili dersin
+  `ders.md` §6 Sorun giderme'sine de eklenir.
+
 **Diğer sert sınırlar:**
 - Operatörler (matematiksel/karşılaştırma/mantıksal) soyut gösterilmez, bir proje
   senaryosuna gömülür.
@@ -76,6 +101,8 @@ kutu listesi, varsa `kaynak:`) + `--- KAVRAM ---` (kısa satır yorumları) + `-
 ## Kararlar / Backlog
 - Faz 0 tamamlandı (2026-09-02).
 - Faz 1+2 aktif. ak0010 (Dahili LED) onaylandı, commit edildi (2026-09-02).
+- `ders.md` sidecar kuralı eklendi (2026-09-03) — her ders için zorunlu, ak0010'a
+  geriye dönük yazıldı. Gerekçe: zihinEv Tasarim.md Karar 11.
 
 ## Tuzaklar
 (boş — bir şey patladıkça Kural/Neden/Nasıl şablonuyla eklenir)
