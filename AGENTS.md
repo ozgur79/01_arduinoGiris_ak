@@ -103,6 +103,8 @@ Tasarim.md Karar 11.
 - Faz 1+2 aktif. ak0010 (Dahili LED) onaylandı, commit edildi (2026-09-02).
 - `ders.md` sidecar kuralı eklendi (2026-09-03) — her ders için zorunlu, ak0010'a
   geriye dönük yazıldı. Gerekçe: zihinEv Tasarim.md Karar 11.
+- ak0020 (Harici LED) onaylandı, commit+push edildi (2026-09-03). ak0030_hizliLed
+  turu için komut bekleniyor.
 
 ## Tuzaklar
 (boş — bir şey patladıkça Kural/Neden/Nasıl şablonuyla eklenir)

@@ -1,6 +1,4 @@
 # Backlog
 
-- İş 1 (ders.md sidecar kuralı) tamamlandı: CLAUDE.md/AGENTS.md güncellendi,
-  kazanimlar.md oluşturuldu, ak0010'un ders.md'si geriye dönük yazıldı. Onay bekliyor.
-- ak0020_hariciLed üretildi (arsiv/002ledYak kaynağından). Onay bekliyor —
-  onaylanırsa commit+push, sonra ak0030_hizliLed turuna geçilecek.
+- ak0030_hizliLed turu için Özgür/Ortak'tan komut bekleniyor — arşiv klasörü yok,
+  ak0020'nin devresi aynen kullanılacak, tek değişken delay değeri (keşif dersi).
