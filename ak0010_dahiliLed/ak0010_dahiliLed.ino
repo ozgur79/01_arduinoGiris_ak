@@ -10,6 +10,7 @@
     { }     -> ak0020
     ;       -> ak0020
     OUTPUT  -> buton dersinde (ünite 2), INPUT ile birlikte açılacak (numarası o tur belirlenecek)
+  Bunlara şimdilik dokunma, sırası gelince tek tek açacağız.
 
   kaynak: arsiv/001dahiliLed/001dahiliLed.ino
 */

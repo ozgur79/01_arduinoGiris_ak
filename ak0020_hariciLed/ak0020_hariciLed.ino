@@ -9,6 +9,7 @@
   Şimdilik kara kutu (sonra açacağız):
     void    -> "fonksiyon" konusunda açılacak (temel düzeyin ilerisinde, numarası o tur belirlenecek)
     OUTPUT  -> buton dersinde (ünite 2), INPUT ile birlikte açılacak (numarası o tur belirlenecek)
+  Bunlara şimdilik dokunma, sırası gelince tek tek açacağız.
 
   kaynak: arsiv/002ledYak/002ledYak.ino
 */

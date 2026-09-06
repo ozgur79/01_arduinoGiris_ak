@@ -15,8 +15,10 @@ diğeri de **aynı oturumda** güncellenir.
 - Repo **public**: gerçek isim, e-posta, parola, token hiçbir dosyaya girmez.
 - **Hedef kitle 5. sınıf.** Ders başına tek yeni fikir; uzun yorum paragrafı yok; her ders
   gözle görülür fiziksel bir sonuç üretir.
-- **Kara kutu kuralı:** Öğretilmeyen her yapı açıkça "kara kutu" olarak işaretlenir ve hangi
-  derste açılacağı yazılır. Sessizce geçilen hiçbir şey kalmaz.
+- **Kara kutu kuralı:** Öğretilmeyen her yapı açıkça "kara kutu" olarak işaretlenir, hangi
+  derste açılacağı yazılır **ve taksitle ödenir** — ders başına tek kutu, `.ino`'nun
+  sonundaki `MERAK KÖŞESİ`nde. Sessizce geçilen hiçbir şey kalmaz, sonsuza kadar
+  ertelenen de kalmaz. Ayrıntı: "Merak Köşesi doktrini".
 - **"Bitti" tanımını ak değil Özgür koyar** — bir ders, Özgür devreyi kurup test edene kadar
   bitmiş sayılmaz.
 
@@ -28,6 +30,15 @@ diğeri de **aynı oturumda** güncellenir.
 - `Test-Gunlugu.md` — her dersin fiziksel test kaydı.
 - `mufredat.md` — ders tablosu + kara kutu takip tablosu + "malzeme gerekiyor" listesi.
 - `kazanimlar.md` — kazanım id kaydı: `id | tanım | ilk öğretildiği ders`.
+- `README.md` — **öğrenciye dönük** giriş: nasıl kullanılır + numaralı ders sırası +
+  durum sütunu. Öğrencinin repo'yu klonlayıp kendi hızında sırayla ilerlemesi buna
+  bağlı; her yeni onaylanan derste güncellenir. (ck'den alındı, 2026-09-06.)
+- `meydanOkuma/` — **ders değil, kart.** LED karşılığı olmayan programlama alıştırmaları
+  (yıldız desenleri, rasgele sayı, TEK/ÇİFT...) ana sıraya girmez, buraya kart olarak
+  düşer. Numarası yok, sırası yok, zorunlu değil. İşlevi: dersi erken bitiren öğrencinin
+  ana hattan koşup gitmesi yerine **derinleşmesi** — ve aynı aleti daha zor bir işte
+  kullanmış olarak takılan arkadaşına yardım edebilecek konuma gelmesi.
+  Gerekçe: Tasarim.md Karar 14.
 
 ## Faz 1+2 — Tek proje döngüsü
 Faz 0 bitti. Her ders, Özgür'ün verdiği tek bir `arsiv/<sıraNo><isim>/` klasörü üzerinden,
@@ -47,24 +58,100 @@ geçilir; geçmezse düzeltilir, aynı tur yeniden denetlenir (commit yok).
 ikisinden herhangi biri yüzünden erken olabilir, üretirken ikisine göre de denetlenir.
 Öncelik: başka dersin önkoşuluysa çekirdek, yaprak dersse genişletme adayı (gerekçeyle).
 
-**Temel düzey kapsamı:** sadece LED → LED+Seri Port → Buton → Buton+Seri Port, bu sırayla,
-biri bitmeden ötekine geçilmez. Malzeme gerektiren dersler (motor, 7 segment, mesafe
-sensörü, buzzer...) müfredata girmez, `mufredat.md` sonundaki "malzeme gerekiyor"
-listesine düşer. Gerekçe: zihinEv Tasarim.md Karar 1, Karar 7.
+**Temel düzey kapsamı:** sadece LED → LED+Seri Port → Buton → Buton+Seri Port, bu sırayla.
+Malzeme gerektiren dersler (motor, 7 segment, mesafe sensörü, buzzer...) müfredata girmez,
+`mufredat.md` sonundaki "malzeme gerekiyor" listesine düşer. Gerekçe: zihinEv Tasarim.md
+Karar 1, Karar 7.
+
+**Ünite 0 (LED) yedi ders, döngüsüz.** `ak0010` dahili LED · `ak0020` harici LED ·
+`ak0030` hız merdiveni (eşik) · `ak0040` iki LED sırayla · `ak0050` LED'e isim ver
+(`const int`) · `ak0060` kara şimşek elle · `ak0070` trafik lambası (kapanış).
+Ünite 0'ın kimliği tek cümle: **dijital çıkış, açık ya da kapalı.** `for` yok, PWM yok,
+seri port yok. Gerekçe: Tasarim.md Karar 14.
+
+`ak0060` (kara şimşek elle) rahatlama sözünü **açıkça vermek zorunda** — 28 satır
+`digitalWrite` yazan öğrenci bunun normal olduğunu sanmamalı: "bu kodun çok kısa bir
+hâli var, seri port ünitesinde öğreneceğiz."
+
+**Ünite 1 (seri port + döngü): öğren / harca ritmi.** Blok konuya göre değil **alete
+göre** kurulur. Her yeni dil aleti art arda iki derste yaşar: önce **ekranda öğrenilir**
+(ekran aletin röntgenidir — `for`'u LED'de öğretirsen öğrenci sadece yanıp sönme görür,
+`i`'yi göremez), hemen ardından **LED'de harcanır** (`for` → kara şimşek, `if`/`%` →
+binary sayıcı, `analogWrite` → nefes alan LED).
+
+**Sert kural: üst üste en fazla iki ekran dersi.** Üçüncüden önce mutlaka fiziksel bir
+sonuç gelir. Bu Karar 1'i bozmaz: "LED bitmeden seri porta geçilmez" kuralı ünite 0
+içindir; ünite 1'e girildikten sonra LED'e dönmek serbesttir.
+
+**Pin kuralı:** pin **0 ve 1 seri port (RX/TX) için rezerve**, pin **13 dahili LED için**.
+Harici LED'ler ünite 0 boyunca **8-12** arasında. Arşivdeki pin numaraları (13, 12, 6, 2)
+körü körüne alınmaz — bu aralığa taşınır. PWM gereken dersler yalnız `~` işaretli
+pinleri kullanır (Uno: 3, 5, 6, 9, 10, 11); `A0` PWM pini **değildir**.
+
+**Seri hız tek değer.** Arşivde hem 9600 hem 115200 var; ünite 1'in ilk dersinde bir
+değer seçilir ve müfredat boyunca değişmez. Öğrenci monitördeki hızı koddakiyle
+eşleştiremezse anlamsız karakter görür ve sebebini bulamaz.
 
 **Kara kutu disiplini:** Kullanılan ama o derste açıklanmayan her yapı, script başlığında
 hangi derste açılacağıyla listelenir — sessiz sızma yok. Fonksiyonel açıklanabilecek bir
-komut ("bu satır pini açar") kara kutuya atılmaz, KAVRAM'da anlatılır; kara kutu sadece o
-düzeyde gerçekten açıklanamayan sözdizimi içindir (örn. `void`, `{ }`, `;`). Ayrı bir "Kara
-Kutu Takip Tablosu" `mufredat.md`'de tutulur.
+komut ("bu satır pini açar") kara kutu listesine girmez, KAVRAM'da anlatılır; kara kutu
+listesi o düzeyde ders içinde anlatılamayacak sözdizimi içindir (örn. `void`, `{ }`, `;`,
+`OUTPUT`). Ayrı bir "Kara Kutu Takip Tablosu" `mufredat.md`'de tutulur.
 
 **Board sızması:** Board'a özel bir gerçek (pin no, gerilim, dahili LED API'si) genel
 doğruymuş gibi yazılmaz — "bu kartta" diye çerçevelenir ya da malzeme/devre/kod bölümüne
 taşınır. Gerekçe: zihinEv Tasarim.md Karar 9.
 
-**Script şablonu (istisnasız):** başlık yorumu (ak no, ne öğreneceğiz, malzeme, devre, kara
-kutu listesi, varsa `kaynak:`) + `--- KAVRAM ---` (kısa satır yorumları) + `--- SEN YAP ---`
-(fiziksel görev, cevapsız — cevap `cozumler/<ak no>_<isim>/` altında).
+**Script şablonu (istisnasız), dört parça:** başlık yorumu (ak no, ne öğreneceğiz, malzeme,
+devre, kara kutu listesi + sabit kapanış satırı, varsa `kaynak:`) + `--- KAVRAM ---` (kısa
+satır yorumları) + `--- SEN YAP ---` (fiziksel görev, cevapsız — cevap
+`cozumler/<ak no>_<isim>/` altında) + `--- MERAK KÖŞESİ ---` (aşağıdaki doktrin; ders
+yüklüyse bu parça atlanır).
+
+Kara kutu listesinin sonunda **sabit** bir kapanış satırı durur, dersten derse değişmez,
+uzamaz: `Bunlara şimdilik dokunma, sırası gelince tek tek açacağız.` İşlevi, öğrencinin
+"bunlar ne, ben mi eksik anladım?" diye takılmaması.
+
+## Merak Köşesi doktrini (ck'den alındı, 2026-09-06)
+
+Gerekçe: zihinEv Tasarim.md Karar 13. Karar 2 iptal değil, tamamlanıyor.
+
+Kara kutuyu **işaretlemek yetmiyor, ödemek gerekiyor.** Söz verilip hiç açılmayan kutu
+üç ders sonra okunmaz hâle geliyor. Kutu iki yere bölünür: dosyanın **başında** sabit
+çerçeve notu (yukarıdaki kapanış satırı), **sonunda** tek kutuluk gerçek açıklama
+(`// --- MERAK KÖŞESİ ---`). Bölünme bilerek: dersin kendi yeni fikri öğrencinin ilk
+karşılaştığı şey olsun, kara kutu açıklaması onu ezmesin.
+
+**Yeri:** dosyanın en sonu, `SEN YAP`'tan **sonra**. Öğrenci kodu çalıştırıp fiziksel
+görevini yaptıktan sonra okur. `ders.md`'ye tekrar yazılmaz — `.ino` yorumu tek yerdir;
+`ders.md` frontmatter'ına sadece `merak_kosesi:` alanı (hangi kutu, kaçıncı tur) girer.
+
+- **Ders başına tek kutu.** Bir derste iki kutu birden açıklanmaz.
+- **Üç adım:** (1) soru satırı — kutunun adını soruya çevir; (2) *şimdilik geçerli*
+  cevap — kutunun gerçekte ne olduğu değil, **öğrencinin kendi kodunda ne yaptığı**;
+  (3) açılış yeri.
+- **Ölçü:** 3-6 satır. Aşarsan fazlası açılış dersine aittir, kes. Tek satıra da
+  sıkıştırma — sıkıştırılmış isim listesi ck'de üç kez denendi, üçünde de kapalı bulundu.
+- **Yeni terim getirmez.** Açıklamak için henüz öğretilmemiş bir terime ihtiyaç varsa
+  o kutu bu derste anlatılamaz — sıradaki kutuya geç, `mufredat.md`'ye sebebini yaz.
+- **Zincir kurar, izole tanım vermez.** Mümkünse bir önceki köşeye bağla.
+- **Tekrar değil, yeni açı.** Aynı kutuya ikinci kez gelindiğinde günlüğe bakılır,
+  üstüne yeni bir katman eklenir.
+- **Rotasyon freni — üç tur, sonra emekli.** Bir kutu üç kez köşeye konu olduysa
+  "yeterince tanıtıldı" sayılır, rotasyondan çıkar (tabloda `emekli`) ve açılış dersine
+  kadar bir daha yazılmaz.
+- **Yük freni — atlanabilir.** Dersin kendi yeni fikri ağırsa köşe atlanır; rotasyon
+  kaymaz, tabloya "atlandı (ders yüklü)" yazılır. Öğrencinin zihni scriptin kendi
+  içeriğiyle zaten doluysa kutu beklemeye alınır — kural budur, istisna değil.
+  (ak0010 ve ak0020 bu yüzden köşesiz; rotasyon ak0030'da başladı.)
+- **Sınanabilir, ama sadece yazıldığı düzeyde.** Kara kutu `ders.md` §7 mini sınavında
+  çıkabilir; soru, köşede yazan cümlenin düzeyini aşmaz. `SEN YAP` kara kutuya dokunmaz.
+- **Sahte numara yasak.** `akXXXX` yazılmaz — öğrenciye anlamsız, takibi imkânsız.
+  Yerine konu/ünite adı: `"fonksiyon" konusunda`, `buton dersinde (ünite 2)`. Açılış
+  dersi üretildiğinde tablo gerçek numarayla güncellenir **ve** o kutuya değinen eski
+  dosyalar geriye dönük düzeltilir.
+- **5. sınıf ölçüsü ck'nin lise ölçüsünü geçmez.** Kutunun cevabı somut ve fiziksel
+  olsun; benzetme serbest, soyut tanım değil.
 
 ## `ders.md` sidecar (her derste zorunlu)
 Her ders klasöründe `.ino`'nun yanına bir `ders.md` üretilir — amaç: dersin ileride
@@ -103,8 +190,24 @@ Tasarim.md Karar 11.
 - Faz 1+2 aktif. ak0010 (Dahili LED) onaylandı, commit edildi (2026-09-02).
 - `ders.md` sidecar kuralı eklendi (2026-09-03) — her ders için zorunlu, ak0010'a
   geriye dönük yazıldı. Gerekçe: zihinEv Tasarim.md Karar 11.
-- ak0020 (Harici LED) onaylandı, commit+push edildi (2026-09-03). ak0030_hizliLed
-  turu için komut bekleniyor.
+- ak0020 (Harici LED) onaylandı, commit+push edildi (2026-09-03).
+- **Merak Köşesi doktrini yürürlüğe girdi (2026-09-06)** — ck'nin (`D:\Atolye\cSharp`)
+  dört turda çözdüğü format ak'ye taşındı. Özgür `.ino` sonunu seçti (`ders.md`'de
+  ayrı bölüm ve iki yerde birden seçenekleri elendi). Beraberinde: rotasyon freni,
+  yük freni, sabit çerçeve kapanış satırı, `README.md`. ck'nin `degerlendirme.md`'si
+  **alınmadı** — `ders.md` §7 mini sınavı zaten o işi görüyor (Özgür kararı).
+  `cozumler/` görünürlüğüne dokunulmadı (Özgür kararı).
+- ak0030 (LED'i hızlandır — eşik) üretildi, onay bekliyor (2026-09-06). SEN YAP
+  Özgür'ün kendi hız merdivenine çevrildi ("saniyede 1/5/10/25/50 kez").
+- **Ünite yapısı revize edildi (2026-09-06, Karar 14)** — Özgür'ün `kabaMüfredat.docx`'i
+  okundu, üç sorusu cevaplandı: `for` seri portla birlikte · `const int` iki LED'den
+  sonra · kara şimşek önce elle sonra `for` ile. Sonuç: `for` ve PWM ünite 0'dan çıktı,
+  ünite 0 yedi derse indi (kapanış: trafik lambası), ünite 1 "öğren/harca" ritmiyle
+  kuruldu, `meydanOkuma/` açıldı. Kaynak dosyalarda altı kod hatası tespit edildi
+  (Karar 14'te listeli), ders üretilirken düzeltilecek.
+- **Açık:** öğrenci→öğretmen geri bildirim kanalı. Özgür sınıf içinde dolaşarak
+  çözmeyi planlıyor; Deneyap Atölyem tarafının geri bildirimi ayrı bir turda
+  konuşulacak.
 
 ## Tuzaklar
 (boş — bir şey patladıkça Kural/Neden/Nasıl şablonuyla eklenir)
