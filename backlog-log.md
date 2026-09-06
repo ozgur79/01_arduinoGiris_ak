@@ -128,4 +128,20 @@ Append-only. Hiçbir şey silinmez.
   beraberlik bozucu ölçüt: iki tasarım pedagojik olarak eşitse, **evde tek başına
   çalışan çocuğun geçebileceği** seçilir. Bu ölçüt uygulanınca bugünkü işte bir çelişki
   bulundu (yukarıdaki "arkadaşınla karşılaştır" maddesi).
+- **Özgür'ün altı cevabı (2026-09-06):** (1) ak0050'ye başlandı. (2-3) Her sette
+  yeterince malzeme ve renkli LED var; minimum sayıları ak belirledi, Özgür onayladı —
+  `mufredat.md`'ye "Ünite 0 Set Başına Minimum Malzeme" tablosu girdi (set başına 4 LED
+  [en az bir kırmızı, bir sarı, bir yeşil] + 4 direnç + 8 jumper). (4) ak0010/ak0020
+  fiziksel testinde sorun çıkmamış; `Test-Gunlugu.md` yeniden inşa edildi, iki satır
+  geriye dönük girildi. (5) **Seri hız board'a özgü:** Arduino'da 9600, Deneyap Kart'ta
+  115200 — tek değer kuralı yerine board kuralı yazıldı, Karar 9 kapsamına alındı.
+- **ak0050 (LED'e isim ver) üretildi, onay bekliyor.** Kaynak yok, ak0040'ın devresi
+  aynen. Yeni kazanım `cpp.const-int`. Merak Köşesi `void` **2. tur, yeni açı**:
+  `const int` ile `void` ismin tam aynı yerinde durur — int "bu bir sayı" derken void
+  "geriye bir şey gelmez" der. SEN YAP 1 dersin çekirdeği: aynı taşıma ak0050'de 2,
+  ak0040'ta 6 satır değiştirmeyi gerektiriyor; öğrenci iki sayıyı kendi sayıyor.
+  SEN YAP 3 daha derin: isimleri `a`/`b` yapınca kod yine çalışıyor — isim Arduino'ya
+  değil insana yarıyor.
+- **ak0050 Özgür tarafından onaylandı (2026-09-06), commit+push edildi.** Ünite 0'da 5/7
+  ders bitti. Sıradaki ak0060 (kara şimşek — elle).
 

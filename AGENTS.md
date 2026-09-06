@@ -88,9 +88,13 @@ Harici LED'ler ünite 0 boyunca **8-12** arasında. Arşivdeki pin numaraları (
 körü körüne alınmaz — bu aralığa taşınır. PWM gereken dersler yalnız `~` işaretli
 pinleri kullanır (Uno: 3, 5, 6, 9, 10, 11); `A0` PWM pini **değildir**.
 
-**Seri hız tek değer.** Arşivde hem 9600 hem 115200 var; ünite 1'in ilk dersinde bir
-değer seçilir ve müfredat boyunca değişmez. Öğrenci monitördeki hızı koddakiyle
-eşleştiremezse anlamsız karakter görür ve sebebini bulamaz.
+**Seri hız board'a özgüdür (Özgür, 2026-09-06):** Arduino Uno'da **9600**, Deneyap
+Kart'ta **115200**. Bu bir tercih değil board gerçeği — Karar 9 gereği `ders.md`'nin
+`board:` bloğuna girer, KAVRAM'da genel doğruymuş gibi yazılmaz. `ak` derslerinde daima
+9600 kullanılır (Arduino IDE'nin varsayılanı; öğrenci hiçbir ayar değiştirmeden çalışır,
+sürtünme az). `dk` portunda 115200'e çevrilir ve `Donanim-Referans-DYMv2.md`'ye işlenir.
+Bir müfredat içinde değer değişmez — öğrenci monitördeki hızı koddakiyle eşleştiremezse
+anlamsız karakter görür ve sebebini bulamaz.
 
 **Kara kutu disiplini:** Kullanılan ama o derste açıklanmayan her yapı, script başlığında
 hangi derste açılacağıyla listelenir — sessiz sızma yok. Fonksiyonel açıklanabilecek bir
@@ -176,6 +180,36 @@ Tasarim.md Karar 11.
   cevap vermez), SEN YAP.
 - Faz 3'te gerçek devrede çıkan `sorun | çözüm` (Test-Gunlugu.md) ilgili dersin
   `ders.md` §6 Sorun giderme'sine de eklenir.
+
+## AI Yoldaşı doktrini (2026-09-06 — Deneyap Atölyem kararları)
+
+Evde öğretmen yok. Destek **üç katmanlıdır**, biri ötekinin yerine geçmez:
+
+1. **`ders.md` §6 Sorun giderme** — birinci ve en önemli ağ. Hesap, yaş sınırı, internet
+   istemez; takılan öğrencinin ilk gittiği yer burasıdır ve vakaların çoğunu burası
+   kapatmalıdır. Öğretmenin yerine geçen asıl şey budur.
+2. **Yanındaki yetişkin** — §8'e "Yanındaki Yetişkine" kartı yazılır. Çocuğa değil
+   **yetişkine** hitap eder: "cevabı söylemeyin, şu üç şeyi sırayla sorun...".
+3. **AI Yoldaşı** — erişimi olan için bonus. **Asla zorunlu değil.**
+
+- **Hiçbir ders AI erişimi gerektirmez.** AI adımı ilerlemenin şartı olamaz: AI
+  araçlarının çoğu 13 yaş altını kabul etmiyor, hedef kitle daha küçük. Ama erişimi olan
+  çocuk **istediği anda** sorabilmeli — AI dersin sonuna kilitlenmez.
+- **Prompt dört parçalıdır:** rol + **bağlam** + görev + "cevabı verme" kısıtı. Bağlam
+  `ders.md` frontmatter'ındaki `board:` bloğundan gelir (kart adı, pin, mantık gerilimi,
+  direnç) ve prompta açıkça yazılır. AI'ın hangi kartta olduğunu **tahmin etmesine izin
+  verilmez** — tahmin ederse genel Arduino bilgisi board'a sızar (5V/3.3V, pin eşlemesi).
+- **AI Yoldaşı asla pin numarası, direnç değeri ya da bağlantı tarifi vermez.** Bunlar
+  yalnız dersten gelir. Prompt "nasıl bağlayacağımı söyle" demez, "düşünmeme yardım et"
+  der. Sokratik kısıt bir üslup tercihi değil, **yanlış olgu iddiasına karşı korumadır**.
+- **Sabit not, her derste:** *"AI'ın dediği devrende çalışmıyorsa AI yanılmıştır, devren
+  haklıdır."* Son hakem fizikseldir — donanım müfredatının ekran müfredatına üstünlüğü
+  tam olarak budur, gerçeklik AI'ı denetler.
+- **§6 tek semptomlu olamaz.** En az 3-5 ayrı semptom, her biri **farklı sebeple**.
+  "LED yanmıyor" tek başına yetmez; ters bağlama, yanlış pin, eksik GND, ortak direnç,
+  yüklenmemiş kod ayrı maddelerdir.
+
+Gerekçe ve tam tartışma: zihinEv `🏰 300-Projects/deneyapAtolyem/AI-Yoldasi-Kararlari.md`.
 
 **Diğer sert sınırlar:**
 - Operatörler (matematiksel/karşılaştırma/mantıksal) soyut gösterilmez, bir proje

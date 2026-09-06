@@ -62,6 +62,7 @@ O yüzden listedeki bir şeyi anlamıyorsan bu normaldir, sırası gelecek.
 | 2 | `ak0020_hariciLed` | Kendi devreni kurup LED yakma (breadboard, direnç) | yayında |
 | 3 | `ak0030_hizliLed` | LED'i hızlandırma ve gözün göremediği sınırı bulma | yayında |
 | 4 | `ak0040_ikiLed` | İki LED'i sırayla yakıp söndürme | yayında |
+| 5 | `ak0050_ledeIsimVer` | Pin numarası yerine isim kullanma (`const int`) | yayında |
 
 Bu tablo her yeni ders eklendiğinde güncellenir. "Sırada ne var" diye buraya bak.
 LED bloğu yedi derste tamamlanıyor (LED'e isim verme, kara şimşek, trafik lambası);

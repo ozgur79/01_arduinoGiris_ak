@@ -31,3 +31,4 @@ bu fark port sırasında görünmezdi.
 | hw.gorme-esigi | Yanıp sönme yeterince hızlanınca göz sönmeyi ayırt edemez, ışık sürekli yanıyormuş gibi görünür; sınırı koyan ışık kaynağı değil gözdür, eşik kişiden kişiye değişir | ak0030 |
 | cpp.coklu-cikis | Aynı programda birden fazla çıkış pini, `pinMode` ve `digitalWrite` satırları ayrı ayrı yazılarak birbirinden bağımsız yönetilir | ak0040 |
 | hw.coklu-led | Birden fazla LED'i aynı devrede, her birinin kendi pini ve kendi direnci olacak şekilde bağlama | ak0040 |
+| cpp.const-int | `const int isim = sayi;` ile bir sayıya isim verilir; `const` o ismin değerinin bir daha değişmeyeceğini söyler. İsim, kodu okuyan insan içindir — derleme sırasında sayıyla değiştirilir | ak0050 |
