@@ -9,15 +9,34 @@ yüzler = ünite/blok (0 = LED), onlar+birler = ders sırası.
 |-------|------|---------|----------------|---------------------|---------|---------|--------|
 | ak0010 | Dahili LED'i yakıp söndür | setup bir kez, loop sürekli çalışır; dahili LED'i yakıp söndürebilme | yok | yok | Arduino Uno kartı | çekirdek | arsiv/001dahiliLed/001dahiliLed.ino |
 | ak0020 | Harici LED'i yakıp söndür | LED'i breadboard üzerinde harici bir pime bağlayıp yakıp söndürebilme; LED'in yönü olduğunu (uzun bacak +, kısa bacak −) ve direncin LED'i koruma görevini açıklayabilme | setup/loop, pinMode/digitalWrite, delay (ak0010) | dahili LED (ak0010) | Arduino Uno kartı, USB kablosu, 1 LED, 1 adet 220 ohm direnç, breadboard, 2 jumper kablo | çekirdek | arsiv/002ledYak/002ledYak.ino |
+| ak0030 | LED'i hızlandır | Yanıp sönmeyi hızlandırmanın bir sınırı olduğunu, o sınırdan sonra gözün sönmeyi ayırt edemediğini gözlemle bulabilme; delay değerinin sıklığı belirlediğini açıklayabilme | setup/loop, delay, pinMode/digitalWrite (ak0010) | harici LED devresi (ak0020) | ak0020'nin devresi aynen (yeni malzeme yok) | çekirdek | arsiv/002ledYak/002ledYak.ino (bekleme süresi 500 ms) |
+| ak0040 | İki LED sırayla | Aynı programda iki çıkış pinini bağımsız yönetebilme; bir LED yanarken diğerini sönük tutabilme (zıt durum); her LED'in kendi direnci olması gerektiğini açıklayabilme | setup/loop, pinMode/digitalWrite, delay (ak0010) | harici LED devresi (ak0020) | Arduino Uno kartı, USB kablosu, 2 LED, 2 adet 220 ohm direnç, breadboard, 4 jumper kablo | çekirdek | arsiv/006ikiLed/006ikiLed.ino (pin 13/12 -> 8/9 düzeltildi) |
 
 ## Kara Kutu Takip Tablosu
 
-| kara kutu | ilk göründüğü ders | açıldığı ders |
-|-----------|---------------------|----------------|
-| void | ak0010 | belirlenmedi — "fonksiyon" konusunda açılacak, temel düzeyin ilerisinde |
-| { } | ak0010 | ak0020 |
-| ; | ak0010 | ak0020 |
-| OUTPUT | ak0010 | buton dersinde (ünite 2), INPUT ile birlikte — numarası o tur belirlenecek |
+Kara kutu sadece işaretlenmez, **taksitle ödenir**: ders başına tek kutu, o dersin
+`.ino` dosyasının sonundaki `MERAK KÖŞESİ`nde 3-6 satırla gerçekten açıklanır. Doktrin
+`CLAUDE.md`'de.
+
+**Rotasyon sırası:** `void` → `OUTPUT` → (başa dön). `{ }` ve `;` rotasyona girmez,
+ak0020'de KAVRAM içinde kapandı.
+
+**Rotasyon freni:** bir kutu 3 tur köşeye konu olduysa `emekli` sayılır, açılış dersine
+kadar bir daha yazılmaz.
+
+**Yük freni:** dersin kendi yeni fikri ağırsa köşe atlanır, rotasyon kaymaz — atlanan
+ders aşağıdaki günlükte görünür. ak0010 (ilk ders, aynı anda 11 yeni şey) ve ak0020
+(ilk devre kurulumu: LED yönü, direnç, breadboard, GND) bu yüzden köşesiz. Rotasyon
+ak0030'da başladı. ak0040 = `OUTPUT` (1. tur); sıradaki kutu yine `void` (2. tur).
+
+| kara kutu | ilk göründüğü ders | açılacağı yer | tur / emekli | Merak Köşesi günlüğü | not |
+|-----------|---------------------|----------------|----------------|----------------------|-----|
+| `void` | ak0010 | "fonksiyon" konusu — temel düzeyin ilerisinde, numarası o tur belirlenecek | 1 tur | ak0030: setup ve loop birer "iş listesi", void listenin adının önünde "geriye bir sonuç vermeyecek" der | rotasyonda — sıradaki kutu |
+| `OUTPUT` | ak0010 | buton dersi (ünite 2), INPUT ile birlikte | 1 tur | ak0040: pinMode satırında pine ne iş yapacağını söylersin; OUTPUT = bu pin dışarı elektrik verecek. Görev bir kez seçildiği için satır setup'ta durur | rotasyonda |
+| `{ }` | ak0010 | ak0020 (açıldı) | rotasyon dışı | — | ak0020'de KAVRAM'da açıldı, kapandı |
+| `;` | ak0010 | ak0020 (açıldı) | rotasyon dışı | — | ak0020'de KAVRAM'da açıldı, kapandı |
+
+**Atlanan dersler (yük freni):** ak0010, ak0020.
 
 ## Malzeme Gerekiyor (temel düzeye girmeyecek)
 (boş — motor/servo, 7 segment, mesafe sensörü, buzzer gibi dersler envanter geldikçe buraya
