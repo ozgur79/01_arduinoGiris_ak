@@ -5,3 +5,4 @@
 | ak0030 | 2026-09-06 | ✓ | ✓ | — | Özgür onayladı, sorun çıkmadı |
 | ak0040 | 2026-09-06 | ✓ | ✓ | — | Özgür onayladı, sorun çıkmadı |
 | ak0050 | 2026-09-06 | ✓ | ✓ | — | Özgür onayladı, sorun çıkmadı |
+| ak0060 | 2026-09-06 | ✓ | ✓ | — | Özgür onayladı, sorun çıkmadı |

@@ -144,4 +144,33 @@ Append-only. Hiçbir şey silinmez.
   değil insana yarıyor.
 - **ak0050 Özgür tarafından onaylandı (2026-09-06), commit+push edildi.** Ünite 0'da 5/7
   ders bitti. Sıradaki ak0060 (kara şimşek — elle).
+- **ak0060 (Kara şimşek — elle) üretildi, onay bekliyor.** Kaynak ham arşivdeki
+  `004karaSimsek`; iki düzeltmeyle alındı: (1) pin 13/12/11/10 -> 8/9/10/11 (pin 13'te
+  dahili LED var), (2) **kaynak koddaki desen hatası**: 7 adımdı ve son adım ilkiyle
+  aynıydı, bu yüzden 1. LED her turda iki kat uzun yanıyordu — 6 adıma indirildi
+  (1-2-3-4-3-2). Yeni kazanım `cpp.kod-tekrari`. Merak Köşesi **yük freniyle atlandı**
+  (30 satırlık desen dersi); rotasyon kaymadı.
+  - Ders bilerek uzun: 6 adım x (4 digitalWrite + 1 delay) = 30 satır, 24'ü birbirinin
+    neredeyse aynısı. SEN YAP sonundaki **rahatlama sözü** doktrin gereği yazıldı.
+  - SEN YAP 1'in kolay çözümü ak0050'nin fikrini ikinci kez kullanıyor: deseni ters
+    çevirmek için loop'a dokunmak (12 düzeltme) yerine dört `const int` satırını ters
+    çevirmek (4 düzeltme) yeter.
+  - SEN YAP 3 de aynı fikri uyguluyor: altı `delay(300)` yerine `const int bekleme = 300;`.
+  - SEN YAP 2 sayma görevi: beşinci LED loop'a **18 satır** ekliyor (30 -> 48). Bu şaşkınlık
+    seri port ünitesindeki döngü dersinin motivasyonu.
+- **AI Yoldaşı doktrini ilk kez uygulandı (ak0060).** Promptlar dört parçalı şablona göre
+  yazıldı (rol + `board:` bağlamı + görev + "cevabı verme"), iki prompt AI'a açıkça
+  "bana pin numarası ya da bağlantı tarifi verme" diyor, §8'e **"Yanındaki Yetişkine"**
+  kartı ve **"AI'ın dediği devrende çalışmıyorsa AI yanılmıştır, devren haklıdır"** sabit
+  notu girdi. §6 Sorun giderme 6 ayrı semptom taşıyor. ak0010-ak0050'de bu yok —
+  geriye dönük güncelleme sorusu backlog'a düştü.
+- **ak0060 Özgür tarafından onaylandı (2026-09-06), commit+push edildi.** Ünite 0'da
+  6/7 ders bitti; kalan tek ders ak0070 (trafik lambası, kapanış projesi).
+- **Karar (Özgür): ak geriye dönük güncellenmeyecek.** AI Yoldaşı doktrini ak0060'tan
+  itibaren geçerli. ak0010-ak0050 onaylı ve commit'li; §8'leri olduğu gibi kalıyor.
+  Eksikler dk portunda dk tarafında kapatılacak — dk'nin kendi doktrini zaten zorunlu
+  kılıyor. Kural `CLAUDE.md`/`AGENTS.md`'ye yazıldı.
+- **Karar (Özgür): `cpp.neopixelwrite` ak'ye eklenmeyecek** — "Arduino farklı bir
+  ekosistem". Deneyap'a özgü kazanımlar için dk kendi havuzunu açtı
+  (`kazanimlar-dk.md`); ortak kavramlar hâlâ ak'nin `kazanimlar.md`'sinden gelir.
 

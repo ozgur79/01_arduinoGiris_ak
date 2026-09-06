@@ -211,6 +211,12 @@ Evde öğretmen yok. Destek **üç katmanlıdır**, biri ötekinin yerine geçme
 
 Gerekçe ve tam tartışma: zihinEv `🏰 300-Projects/deneyapAtolyem/AI-Yoldasi-Kararlari.md`.
 
+**Geriye dönük uygulanmaz (Özgür, 2026-09-06).** Bu doktrin ak0060'ta yürürlüğe girdi.
+ak0010-ak0050 onaylanmış ve commit edilmiş derslerdir; §8'leri eski hâliyle kalır. Eksik
+parçalar (board bağlamlı prompt, "Yanındaki Yetişkine" kartı, sabit not) o dersler
+**dk'ya porte edilirken** dk tarafında eklenir — dk'nin kendi doktrini bunu zaten
+zorunlu kılıyor.
+
 **Diğer sert sınırlar:**
 - Operatörler (matematiksel/karşılaştırma/mantıksal) soyut gösterilmez, bir proje
   senaryosuna gömülür.
