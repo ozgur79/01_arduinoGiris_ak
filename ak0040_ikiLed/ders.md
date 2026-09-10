@@ -106,7 +106,7 @@ aynı anda sönük kalmaz — devrede sürekli bir ışık vardır, sadece yeri 
 ## 7. Mini sınav
 1. [temel] Bu derste kaç tane `pinMode` satırı var, neden?
    - A) 1 tane — bir kart var
-   - B) 2 tane — iki ayrı pin kullanılıyor ✅
+   - B) 2 tane — iki ayrı pin kullanılıyor
    - C) 4 tane — her LED'in iki bacağı var
    - D) Hiç yok — `digitalWrite` yeterli
    - ipucu: KAVRAM'ın ilk yorum satırına bak.
@@ -114,12 +114,12 @@ aynı anda sönük kalmaz — devrede sürekli bir ışık vardır, sadece yeri 
 2. [temel] "Zıt durum" ne demek?
    - A) İki LED aynı anda yanar
    - B) İki LED aynı anda söner
-   - C) Biri yanarken diğeri sönüktür ✅
+   - C) Biri yanarken diğeri sönüktür
    - D) LED'ler ters takılmıştır
    - ipucu: KAVRAM'ın üçüncü yorum satırına bak.
 
 3. [temel] Her LED'in neden kendi direnci olmalı?
-   - A) İki LED tek dirençle beslenirse ikisi de sönük yanar ✅
+   - A) İki LED tek dirençle beslenirse ikisi de sönük yanar
    - B) Arduino iki direnç ister
    - C) Direnç LED'in rengini belirler
    - D) Gerekli değil, tek direnç yeter
@@ -127,14 +127,14 @@ aynı anda sönük kalmaz — devrede sürekli bir ışık vardır, sadece yeri 
 
 4. [temel] 9'a bağlı LED hiç yanmıyor, 8'e bağlı çalışıyor. İlk bakacağın üç şey nedir?
    - A) USB kablosu, bilgisayar, Arduino IDE
-   - B) `pinMode(9, OUTPUT)` satırı, LED'in yönü, kablonun pini ✅
+   - B) `pinMode(9, OUTPUT)` satırı, LED'in yönü, kablonun pini
    - C) Direncin rengi, breadboard'un markası, LED'in boyu
    - D) `delay()` süresi, kartın modeli, GND
    - ipucu: §6 Sorun giderme.
 
 5. [ileri] `digitalWrite(8, HIGH);` yazdıktan sonra `delay(300);` çalışırken 8. pin ne
    durumdadır?
-   - A) 300 milisaniye boyunca açık kalır ✅
+   - A) 300 milisaniye boyunca açık kalır
    - B) Bir an açılıp hemen kapanır
    - C) Sürekli açılıp kapanır
    - D) `delay()` bitene kadar kapalıdır
@@ -143,7 +143,7 @@ aynı anda sönük kalmaz — devrede sürekli bir ışık vardır, sadece yeri 
 6. [ileri] "8'e bağlı LED 300 ms'de, 9'a bağlı LED 400 ms'de yanıp sönsün" isteseydin,
    bunu bu derste öğrendiklerinle kurabilir miydin?
    - A) Evet, iki `delay()` yazmak yeterli
-   - B) Hayır — `delay()` çalışırken program başka hiçbir şey yapamaz ✅
+   - B) Hayır — `delay()` çalışırken program başka hiçbir şey yapamaz
    - C) Evet, ama LED'leri ters takmak gerekir
    - D) Hayır, çünkü Arduino'da iki LED aynı anda kullanılamaz
    - ipucu: `delay()` beklerken program duruyor mu, çalışıyor mu?

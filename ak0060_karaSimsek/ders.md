@@ -104,13 +104,13 @@ diğerleriyle **aynı sürede** yanar — biri daha uzun yanıyorsa desende bir 
 ## 7. Mini sınav
 1. [temel] `loop()` içinde kaç adım var?
    - A) 4
-   - B) 6 ✅
+   - B) 6
    - C) 8
    - D) 30
    - ipucu: Yorum satırlarındaki "1. adım", "2. adım" ifadelerini say.
 
 2. [temel] Her adımda neden dört tane `digitalWrite` satırı var?
-   - A) Dört LED'in de o adımdaki durumu tek tek yazılıyor ✅
+   - A) Dört LED'in de o adımdaki durumu tek tek yazılıyor
    - B) Her LED dört kez yakılıyor
    - C) Dört farklı renk için
    - D) Arduino dört satır ister
@@ -119,12 +119,12 @@ diğerleriyle **aynı sürede** yanar — biri daha uzun yanıyorsa desende bir 
 3. [temel] Işık sağ uca vardıktan sonra ne olur?
    - A) Söner ve program durur
    - B) Baştan sağ uca atlar
-   - C) Geri döner, soldan devam eder ✅
+   - C) Geri döner, soldan devam eder
    - D) Dördü birden yanar
    - ipucu: Desen 1-2-3-4-3-2.
 
 4. [temel] `const int led3 = 10;` satırı ne yapar?
-   - A) 10 numaralı pine `led3` adını verir ✅
+   - A) 10 numaralı pine `led3` adını verir
    - B) 3 numaralı LED'i 10 kez yakar
    - C) 10 milisaniye bekler
    - D) Üçüncü LED'i açar
@@ -134,14 +134,14 @@ diğerleriyle **aynı sürede** yanar — biri daha uzun yanıyorsa desende bir 
    Bu ne soruna yol açar?
    - A) Hiçbir sorun olmaz
    - B) Program derlenmez
-   - C) 1. LED her turda iki kat uzun yanar, desen aksar ✅
+   - C) 1. LED her turda iki kat uzun yanar, desen aksar
    - D) 4. LED hiç yanmaz
    - ipucu: `loop()` bittikten sonra hangi adım gelir?
 
 6. [ileri] Beş LED'lik bir kara şimşekte `loop()` içinde kaç `digitalWrite` satırı olur?
    - A) 20
    - B) 24
-   - C) 40 ✅
+   - C) 40
    - D) 48
    - ipucu: 8 adım × her adımda 5 LED'in durumu.
 

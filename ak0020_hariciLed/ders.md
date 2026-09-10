@@ -90,7 +90,7 @@ ama ışık artık kartın üzerinde değil, senin kurduğun devrede.
 
 ## 7. Mini sınav
 1. [temel] LED'in hangi bacağı Arduino pinine, hangisi dirence bağlanır?
-   - A) Uzun bacak pine, kısa bacak dirence ✅
+   - A) Uzun bacak pine, kısa bacak dirence
    - B) Kısa bacak pine, uzun bacak dirence
    - C) İkisi de pine bağlanır
    - D) İkisi de dirence bağlanır
@@ -98,7 +98,7 @@ ama ışık artık kartın üzerinde değil, senin kurduğun devrede.
 
 2. [temel] Bu derste direncin görevi nedir?
    - A) LED'i daha parlak yapmak
-   - B) LED'e giden akımı sınırlayıp LED'i korumak ✅
+   - B) LED'e giden akımı sınırlayıp LED'i korumak
    - C) Pin numarasını değiştirmek
    - D) delay() süresini kısaltmak
    - ipucu: Direnç kelimesinin "engellemek" anlamıyla ilişkisini düşün.
@@ -106,13 +106,13 @@ ama ışık artık kartın üzerinde değil, senin kurduğun devrede.
 3. [temel] Bu derste LED hangi pine bağlıdır?
    - A) Pin 13
    - B) Pin 6
-   - C) Pin 8 ✅
+   - C) Pin 8
    - D) Pin 0
    - ipucu: `pinMode()` satırındaki sayıya bak.
 
 4. [ileri] LED'i ters taksaydın (bacakları yer değiştirseydin) ne olurdu?
    - A) LED daha parlak yanardı
-   - B) LED hiç yanmazdı ✅
+   - B) LED hiç yanmazdı
    - C) Direnç yanardı
    - D) Arduino kartı bozulurdu
    - ipucu: LED yönlü bir parçadır — akım sadece tek yönde geçer.
@@ -120,7 +120,7 @@ ama ışık artık kartın üzerinde değil, senin kurduğun devrede.
 5. [ileri] Bu devrede mantık gerilimi 5V, direnç 220 ohm. Farklı bir kartta mantık
    gerilimi 3.3V olsaydı, aynı LED için genelde ne beklenir?
    - A) Aynı direnç değeri her board'da kullanılır
-   - B) Direnç değeri board'un gerilimine göre yeniden hesaplanır ✅
+   - B) Direnç değeri board'un gerilimine göre yeniden hesaplanır
    - C) Direnç hiç gerekmez
    - D) LED'in bacak yönü değişir
    - ipucu: Ohm Kanunu'nda gerilim değişirse ne değişir?

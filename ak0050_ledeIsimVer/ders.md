@@ -104,13 +104,13 @@ yazdın; ikincisi değiştirmesi kolay olan.
 ## 7. Mini sınav
 1. [temel] `const int kirmizi = 8;` satırı ne yapar?
    - A) 8 numaralı pini açar
-   - B) 8 sayısına `kirmizi` adını verir ✅
+   - B) 8 sayısına `kirmizi` adını verir
    - C) Kırmızı LED'i yakar
    - D) LED'in rengini değiştirir
    - ipucu: KAVRAM'ın ilk yorum satırına bak.
 
 2. [temel] `const` ne demek?
-   - A) Bu isme verilen sayı bir daha değişmeyecek ✅
+   - A) Bu isme verilen sayı bir daha değişmeyecek
    - B) Bu satır bir kez çalışacak
    - C) Bu bir LED'dir
    - D) Bu satır yorumdur
@@ -119,13 +119,13 @@ yazdın; ikincisi değiştirmesi kolay olan.
 3. [temel] İsim satırları kodun neresinde durur?
    - A) `setup`'ın içinde
    - B) `loop`'un içinde
-   - C) İkisinin de dışında, en üstte ✅
+   - C) İkisinin de dışında, en üstte
    - D) Dosyanın en sonunda
    - ipucu: İki blok da o isimleri kullanabilmeli.
 
 4. [temel] Kırmızı LED'in kablosunu pin 8'den pin 10'a taşıdın. Kodda kaç satır
    değiştirmen gerekir?
-   - A) 1 satır ✅
+   - A) 1 satır
    - B) 2 satır
    - C) 3 satır
    - D) Hiç gerekmez
@@ -133,14 +133,14 @@ yazdın; ikincisi değiştirmesi kolay olan.
 
 5. [ileri] `const` yerine sadece `int` yazsaydın ne olurdu?
    - A) Kod hiç çalışmazdı
-   - B) Aynı çalışırdı, ama yanlışlıkla değeri değiştirirsen hata alamazdın ✅
+   - B) Aynı çalışırdı, ama yanlışlıkla değeri değiştirirsen hata alamazdın
    - C) LED daha parlak yanardı
    - D) İsim kullanılamazdı
    - ipucu: `const` bilgisayarı değil, gelecekteki seni koruyor.
 
 6. [ileri] Verdiğin isim Arduino'ya gönderilen programda var mıdır?
    - A) Evet, program isimleri de taşır
-   - B) Hayır, derleme sırasında isimler sayılarla değiştirilir ✅
+   - B) Hayır, derleme sırasında isimler sayılarla değiştirilir
    - C) Sadece `const` yazarsan taşır
    - D) LED yanarken taşır, sönerken taşımaz
    - ipucu: İsim vermenin programa bir bedeli var mı?

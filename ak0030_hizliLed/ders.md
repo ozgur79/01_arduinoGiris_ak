@@ -107,19 +107,19 @@ hızlanır; bir yerden sonra göz sönmeyi seçemez ve LED sürekli yanıyormuş
 1. [temel] `delay(250)` kaç saniyelik bekleme yapar?
    - A) 250 saniye
    - B) 25 saniye
-   - C) Çeyrek saniye ✅
+   - C) Çeyrek saniye
    - D) 2,5 saniye
    - ipucu: 1000 milisaniye 1 saniyeye eşit.
 
 2. [temel] Bu derste devrede ne değişti?
    - A) LED'in pini değişti
    - B) Direncin değeri değişti
-   - C) Devrede hiçbir şey değişmedi, sadece koddaki sayı değişti ✅
+   - C) Devrede hiçbir şey değişmedi, sadece koddaki sayı değişti
    - D) LED'in yönü değişti
    - ipucu: §4'te "ak0020'nin devresi aynen kullanılır" yazıyor.
 
 3. [temel] `delay()` sayısını küçültürsen LED ne yapar?
-   - A) Daha sık yanıp söner ✅
+   - A) Daha sık yanıp söner
    - B) Daha seyrek yanıp söner
    - C) Hiç yanmaz
    - D) Rengi değişir
@@ -127,21 +127,21 @@ hızlanır; bir yerden sonra göz sönmeyi seçemez ve LED sürekli yanıyormuş
 
 4. [temel] LED çok hızlandığında sürekli yanıyormuş gibi görünüyor. Gerçekte ne oluyor?
    - A) LED artık sönmüyor
-   - B) LED hâlâ sönüyor ama göz bunu ayırt edemiyor ✅
+   - B) LED hâlâ sönüyor ama göz bunu ayırt edemiyor
    - C) Arduino komutları atlıyor
    - D) Direnç ısınıp LED'i açık tutuyor
    - ipucu: Değişen LED mi, gözün mü?
 
 5. [ileri] `delay` 20 ms iken LED saniyede kaç kez yanıp söner?
    - A) 20
-   - B) 25 ✅
+   - B) 25
    - C) 50
    - D) 100
    - ipucu: Bir tur iki `delay()` sürer; `1000 / (2 × 20)`.
 
 6. [ileri] LED'in saniyede 5 kez yanıp sönmesini istiyorsun. `delay` kaç olmalı?
    - A) 5
-   - B) 100 ✅
+   - B) 100
    - C) 200
    - D) 500
    - ipucu: `delay = 1000 / (2 × hedef hız)`.
@@ -149,7 +149,7 @@ hızlanır; bir yerden sonra göz sönmeyi seçemez ve LED sürekli yanıyormuş
 7. [ileri] İki arkadaş aynı devrede farklı eşik değerleri buldu. Bu neyi gösterir?
    - A) Biri kodu yanlış yazmıştır
    - B) Arduino kartlarından biri bozuktur
-   - C) Görme eşiği kişiden kişiye değişir, tek doğru sayı yoktur ✅
+   - C) Görme eşiği kişiden kişiye değişir, tek doğru sayı yoktur
    - D) Direnç değerleri farklıdır
    - ipucu: Sınırı koyan LED değil, göz.
 

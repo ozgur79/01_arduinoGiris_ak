@@ -69,13 +69,13 @@ söner: 1 saniye yanık, 1 saniye sönük, sürekli tekrar.
 ## 7. Mini sınav
 1. [temel] `pinMode(13, OUTPUT);` satırı ne işe yarar?
    - A) 13. pini bir giriş (buton gibi) pini yapar
-   - B) 13. pini bir çıkış (LED gibi) pini yapar ✅
+   - B) 13. pini bir çıkış (LED gibi) pini yapar
    - C) LED'i doğrudan yakar
    - D) 1 saniye bekletir
    - ipucu: OUTPUT kelimesinin İngilizce anlamını düşün.
 
 2. [temel] `delay(1000);` kaç saniye bekletir?
-   - A) 1 saniye ✅
+   - A) 1 saniye
    - B) 10 saniye
    - C) 100 saniye
    - D) 1000 saniye
@@ -83,7 +83,7 @@ söner: 1 saniye yanık, 1 saniye sönük, sürekli tekrar.
 
 3. [temel] `loop()` fonksiyonu kart açıkken kaç kez çalışır?
    - A) Sadece 1 kez
-   - B) Kart kapanana kadar sürekli baştan ✅
+   - B) Kart kapanana kadar sürekli baştan
    - C) Tam olarak 2 kez
    - D) Hiç çalışmaz
    - ipucu: setup() ile loop() arasındaki fark neydi?
@@ -92,14 +92,14 @@ söner: 1 saniye yanık, 1 saniye sönük, sürekli tekrar.
    bir durum değiştirirdi?
    - A) 1 saniye
    - B) 100 saniye
-   - C) 1000 saniye ✅
+   - C) 1000 saniye
    - D) 10000 saniye
    - ipucu: 1 saniye = 1000 milisaniye. 1.000.000 milisaniye kaç saniye eder?
 
 5. [ileri] `digitalWrite(13, HIGH);` satırı yanlışlıkla `loop()` yerine `setup()`
    içine yazılsaydı ne olurdu?
    - A) LED hiç yanmazdı
-   - B) LED kart açılırken bir kez yanar, bir daha hiç sönmezdi ✅
+   - B) LED kart açılırken bir kez yanar, bir daha hiç sönmezdi
    - C) Program derlenmezdi
    - D) Kart açılmazdı
    - ipucu: setup() ne zaman, kaç kez çalışıyordu?
