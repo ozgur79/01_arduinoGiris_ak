@@ -174,3 +174,13 @@ Append-only. Hiçbir şey silinmez.
   ekosistem". Deneyap'a özgü kazanımlar için dk kendi havuzunu açtı
   (`kazanimlar-dk.md`); ortak kavramlar hâlâ ak'nin `kazanimlar.md`'sinden gelir.
 
+- **ak0060 Özgür tarafından onaylandı (2026-09-11).** Fiziksel test kaydı
+  `Test-Gunlugu.md`'de. Backlog'daki onay bekliyor maddesi kapatıldı.
+- **ak0070_trafikLambasi üretildi, onay bekliyor (2026-09-11).** Ünite 0 kapanış
+  projesi; üç LED pin 8-9-10, `const int` isimleri ve her adımda üç çıkışın tamamı
+  yazılıyor. Süreler kırmızı 4000 ms, yeşil 3000 ms, sarı 1000 ms. Merak Köşesi
+  `OUTPUT` 2. turdur. Cevap anahtarı ayrı öğretmen deposuna eklendi; fiziksel test
+  Özgür'ü, içerik denetimi Ortak'ı bekliyor.
+
+- **ak0070_trafikLambasi Özgür tarafından onaylandı (2026-09-11).** Derlendi ve
+  kartta çalıştı; sorun bildirilmedi. Fiziksel test kaydı `Test-Gunlugu.md`'de.
