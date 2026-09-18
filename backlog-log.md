@@ -184,3 +184,8 @@ Append-only. Hiçbir şey silinmez.
 
 - **ak0070_trafikLambasi Özgür tarafından onaylandı (2026-09-11).** Derlendi ve
   kartta çalıştı; sorun bildirilmedi. Fiziksel test kaydı `Test-Gunlugu.md`'de.
+
+## 2026-09-17
+- **ak0110_ledDurumunuYaz içerik denetiminden geçti ve B bölümü onaylandı.** Ana ders
+  ile çözüm Arduino Uno hedefi için derlendi. Fiziksel kart testi bildirilmediği için
+  `Test-Gunlugu.md` ve canlı backlog'da teste hazır olarak tutuluyor.

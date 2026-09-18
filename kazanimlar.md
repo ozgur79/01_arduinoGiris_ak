@@ -33,3 +33,9 @@ bu fark port sırasında görünmezdi.
 | hw.coklu-led | Birden fazla LED'i aynı devrede, her birinin kendi pini ve kendi direnci olacak şekilde bağlama | ak0040 |
 | cpp.const-int | `const int isim = sayi;` ile bir sayıya isim verilir; `const` o ismin değerinin bir daha değişmeyeceğini söyler. İsim, kodu okuyan insan içindir — derleme sırasında sayıyla değiştirilir | ak0050 |
 | cpp.kod-tekrari | Birbirinin neredeyse aynısı olan satırlar çoğalıyorsa kodun kısaltılabileceğini fark etme; tekrarın kendisini bir problem olarak görme | ak0060 |
+| cpp.serial-begin | `Serial.begin(9600)` ile kartın bilgisayara yazı göndereceği seri bağlantı başlatılır; kart ve Seri Monitör aynı hızı kullanır | ak0110 |
+| cpp.serial-println | `Serial.println(...)` ile tırnak içindeki yazı Seri Monitör'e gönderilir ve sonraki yazı için yeni satıra geçilir | ak0110 |
+| hw.seri-port | Arduino Uno'da seri port bilgisayarla yazı alışverişi yapar; pin 0 ve 1 bu iş için ayrılmıştır | ak0110 |
+| cpp.digitalread | `digitalRead()` ile bir giriş pininin `HIGH` mi `LOW` mu olduğu okunur | dk0050 *(Deneyap — Ünite 2/`ak02xx` bu id'yi ak tarafında henüz üretmedi, dilim stratejisi gereği dk önce vardı)* |
+| cpp.if-else | `if (...) { }` koşul doğruysa çalışır, `else { }` yanlışsa çalışır — karar dallanması | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
+| hw.buton-devre | Butonu breadboard üzerinde giriş pinine bağlama; basılı/basılı değil iki durumu `digitalRead` ile ayırt etme | dk0050 *(Deneyap — bkz. yukarıdaki not)* |

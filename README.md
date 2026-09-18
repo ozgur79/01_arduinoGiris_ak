@@ -64,7 +64,9 @@ O yüzden listedeki bir şeyi anlamıyorsan bu normaldir, sırası gelecek.
 | 4 | `ak0040_ikiLed` | İki LED'i sırayla yakıp söndürme | yayında |
 | 5 | `ak0050_ledeIsimVer` | Pin numarası yerine isim kullanma (`const int`) | yayında |
 | 6 | `ak0060_karaSimsek` | Dört LED'le gidip gelen ışık deseni | yayında |
+| 7 | `ak0070_trafikLambasi` | Üç LED'le trafik lambası kurma | yayında |
+| 8 | `ak0110_ledDurumunuYaz` | LED'in durumunu Seri Monitör'e yazdırma | teste hazır |
 
 Bu tablo her yeni ders eklendiğinde güncellenir. "Sırada ne var" diye buraya bak.
-LED bloğu yedi derste tamamlanıyor (LED'e isim verme, kara şimşek, trafik lambası);
-ardından seri port ve buton geliyor.
+LED bloğu yedi derste tamamlandı. Seri port bloğunda kartın yaptığı işi bilgisayara
+yazdırmaya başladık; ardından döngüler ve buton gelecek.

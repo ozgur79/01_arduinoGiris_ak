@@ -7,3 +7,5 @@
 | ak0050 | 2026-09-06 | ✓ | ✓ | — | Özgür onayladı, sorun çıkmadı |
 | ak0060 | 2026-09-06 | ✓ | ✓ | — | Özgür onayladı, sorun çıkmadı |
 | ak0070 | 2026-09-11 | ✓ | ✓ | — | Özgür kartta test etti |
+| ak0110 | 2026-09-18 | ✓ | ✓ | — | Özgür kartta test etti |
+| ak0115 | 2026-09-18 | ✓ | ✓ | — | Özgür kartta test etti |

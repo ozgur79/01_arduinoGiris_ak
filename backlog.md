@@ -1,5 +1,6 @@
 # Backlog
 
+- **ak0110/ak0115 kartta test edildi, onaylandı (2026-09-18).** Ünite 1 Paket 1 kapandı.
 - **Karar verildi (Özgür, 2026-09-06): ak geriye dönük güncellenmeyecek.** AI Yoldaşı
   doktrini ak0060'tan itibaren geçerli; ak0010-ak0050'nin §8'leri eski hâliyle kalıyor.
   Eksik parçalar o dersler **dk'ya porte edilirken dk tarafında** eklenecek.
