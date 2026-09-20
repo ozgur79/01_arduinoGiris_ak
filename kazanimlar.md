@@ -15,9 +15,20 @@ Bu kazanım board'a bağlı değildir, her kartta aynıdır — port sırasında
 
 **İki id'nin ayrılma gerekçesi (2026-09-03):** `cpp.pinmode` ve `cpp.digitalwrite` önce
 tek id'ydi (`cpp.pinmode-digitalwrite`), çünkü Arduino Uno'da ikisi hep birlikte geliyor.
-Deneyap Mini v2'de gelmiyor: dahili RGB LED dersi `pinMode` kullanıyor ama eylem
-`neopixelWrite`, yani `digitalWrite` ilk kez harici LED dersinde geçiyor. Tek id kalsaydı
-bu fark port sırasında görünmezdi.
+Deneyap Mini v2'de gelmiyor sanılıyordu: dahili RGB LED dersinin (dk0010) `pinMode`
+kullandığı, eylemin ise `neopixelWrite` olduğu düşünülmüştü — yani `digitalWrite`'ın
+ilk kez harici LED dersinde (dk0020) geçeceği varsayılmıştı.
+
+**Düzeltme (2026-09-20):** Bu öncül yanlış çıktı — dk0010 kartta test edildi,
+`pinMode(LED_BUILTIN, OUTPUT)` satırının LED üzerinde hiçbir etkisi olmadığı görüldü
+(`neopixelWrite` pimi RMT üzerinden kendi ayarlıyor). Satır dk0010'dan tamamen
+kaldırıldı (`01_deneyapGiris_dk@7051dcc`) — dk0010 artık `cpp.pinmode` kazanımını hiç
+içermiyor. Deneyap tarafında `cpp.pinmode` ile `cpp.digitalwrite` aslında dk0020'de
+**birlikte, ilk kez orada** öğretiliyor — tıpkı Arduino Uno'daki gibi. Bölünmüş id'ler
+yine de korundu: geri birleştirmek zaten teslim edilmiş çok sayıda dersi (ak0010–ak0115,
+dk0010–dk0040) etkiler, kazanım takibinin ayrı ayrı olması bir zarar getirmiyor. Bu,
+bilinçli bir "değiştirme" kararı — id yapısı aynı kalıyor, yalnız üstteki tarihsel
+gerekçenin dayandığı örnek artık geçersiz, güncel durum bu paragrafta.
 
 | id | tanım | ilk öğretildiği ders |
 |----|-------|------------------------|
