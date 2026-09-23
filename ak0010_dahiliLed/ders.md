@@ -99,7 +99,7 @@ söner: 1 saniye yanık, 1 saniye sönük, sürekli tekrar.
 5. [ileri] `digitalWrite(13, HIGH);` satırı yanlışlıkla `loop()` yerine `setup()`
    içine yazılsaydı ne olurdu?
    - A) LED hiç yanmazdı
-   - B) LED kart açılırken bir kez yanar, bir daha hiç sönmezdi
+   - B) LED kart açılırken bir kez yanar, sonra söner ve bir daha hiç yanmazdı
    - C) Program derlenmezdi
    - D) Kart açılmazdı
    - ipucu: setup() ne zaman, kaç kez çalışıyordu?
