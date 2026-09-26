@@ -1,5 +1,12 @@
 # Backlog
 
+- **ak0120/ak0130/ak0140 kartta test edildi, onaylandı (2026-09-26).** Ortak'ın iş emri
+  (`zihinEv/🏰 300-Projects/arduinoMufredat/is-emri-ak-unite1-paket2.md`) üzerine
+  üretildi: Sayaç (değişken/atama), `for`, Kara şimşek-`for`. Kaynaklar arşive
+  kopyalandı (`002for1den100e`, `004karaSimsekIleri`; `009ak120ham` zaten arşivdeydi).
+  ak0140'ta kaynağın desen hatası (uç LED'lerin art arda iki kez yanması) kod okunarak
+  tespit edilip düzeltildi, kartta doğrulandı — gerekçe `ders.md` §5'te. Ünite 1
+  Paket 2 kapandı.
 - **ak0110/ak0115 kartta test edildi, onaylandı (2026-09-18).** Ünite 1 Paket 1 kapandı.
 - **Karar verildi (Özgür, 2026-09-06): ak geriye dönük güncellenmeyecek.** AI Yoldaşı
   doktrini ak0060'tan itibaren geçerli; ak0010-ak0050'nin §8'leri eski hâliyle kalıyor.

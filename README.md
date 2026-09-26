@@ -65,8 +65,12 @@ O yüzden listedeki bir şeyi anlamıyorsan bu normaldir, sırası gelecek.
 | 5 | `ak0050_ledeIsimVer` | Pin numarası yerine isim kullanma (`const int`) | yayında |
 | 6 | `ak0060_karaSimsek` | Dört LED'le gidip gelen ışık deseni | yayında |
 | 7 | `ak0070_trafikLambasi` | Üç LED'le trafik lambası kurma | yayında |
-| 8 | `ak0110_ledDurumunuYaz` | LED'in durumunu Seri Monitör'e yazdırma | teste hazır |
+| 8 | `ak0110_ledDurumunuYaz` | LED'in durumunu Seri Monitör'e yazdırma | yayında |
+| 9 | `ak0115_trafikLambasiYazsin` | Trafik lambasında yanan rengi Seri Monitör'e yazdırma | yayında |
+| 10 | `ak0120_sayac` | Kartın kendi kendine saymasını sağlama (değişken) | yayında |
+| 11 | `ak0130_for` | Sayma işini `for` döngüsüyle tek satıra toplama | yayında |
+| 12 | `ak0140_karaSimsekFor` | Kara şimşek desenini `for` ile kısaltma | yayında |
 
 Bu tablo her yeni ders eklendiğinde güncellenir. "Sırada ne var" diye buraya bak.
 LED bloğu yedi derste tamamlandı. Seri port bloğunda kartın yaptığı işi bilgisayara
-yazdırmaya başladık; ardından döngüler ve buton gelecek.
+yazdırmaya başladık; ardından döngüler geldi, sırada buton var.

@@ -47,6 +47,10 @@ gerekçenin dayandığı örnek artık geçersiz, güncel durum bu paragrafta.
 | cpp.serial-begin | `Serial.begin(9600)` ile kartın bilgisayara yazı göndereceği seri bağlantı başlatılır; kart ve Seri Monitör aynı hızı kullanır | ak0110 |
 | cpp.serial-println | `Serial.println(...)` ile tırnak içindeki yazı Seri Monitör'e gönderilir ve sonraki yazı için yeni satıra geçilir | ak0110 |
 | hw.seri-port | Arduino Uno'da seri port bilgisayarla yazı alışverişi yapar; pin 0 ve 1 bu iş için ayrılmıştır | ak0110 |
+| cpp.degisken | Değeri program çalışırken değişebilen bir isim (`int sayac = 0;`); `const int`'in tam tersi | ak0120 |
+| cpp.atama | `sayac = sayac + 1;` matematiksel eşitlik değildir: eşittirin sağı önce hesaplanır, sonuç soldaki isme atanır | ak0120 |
+| cpp.for | `for (başlangıç; koşul; artış) { }` ile sayma işinin üç parçası tek satırda toplanır; koşul doğru olduğu sürece blok tekrar çalışır | ak0130 |
+| cpp.arttirma | `sayac++` / `sayac--`, `sayac = sayac + 1;` / `sayac = sayac - 1;`'in kısa yazılışıdır | ak0130 |
 | cpp.digitalread | `digitalRead()` ile bir giriş pininin `HIGH` mi `LOW` mu olduğu okunur | dk0050 *(Deneyap — Ünite 2/`ak02xx` bu id'yi ak tarafında henüz üretmedi, dilim stratejisi gereği dk önce vardı)* |
 | cpp.if-else | `if (...) { }` koşul doğruysa çalışır, `else { }` yanlışsa çalışır — karar dallanması | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
 | hw.buton-devre | Butonu breadboard üzerinde giriş pinine bağlama; basılı/basılı değil iki durumu `digitalRead` ile ayırt etme | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
