@@ -22,6 +22,9 @@ yüzler = ünite/blok (0 = LED), onlar+birler = ders sırası.
 | ak0150 | `while`: olduğu sürece say | `while` döngüsünün koşul-blok yapısını kurabilme; `for`'un tek satırda topladığı üç parçayı (başlangıç, koşul, artış) ayrı ayrı yazabilme | `for`/`sayac++`/değişken (ak0130, ak0120) | yok | Arduino Uno kartı, USB kablosu (devre yok) | çekirdek — döngülerin ikinci biçimi | ..\arsiv\kabaMüfredat.docx §023 (115200→9600, print+" "→println) |
 | ak0155 | Sonsuz döngü: `loop()` aslında ne? (harcama) | `while (true)` ile koşulu hiç yanlış olmayan bir döngü kurabilme; `loop()`'un kendisinin de bir sonsuz döngü olduğunu açıklayabilme | `while` (ak0150) | dahili LED (ak0010, aynen) | sadece Arduino Uno kartı, USB kablosu | genişletme — yeni fikir `while(true)` | kendi ak0010_dahiliLed.ino'n |
 | ak0160 | Tek sayılar: `if` + `%` | `if` ile koşullu çalıştırma yapabilme; `%` (kalan) ile bir sayının tek/çift olduğunu belirleyebilme; `==`/`!=` karşılaştırma operatörlerini `<=` ile ilişkilendirebilme | sonsuz döngü (ak0155), değişken (ak0120), `<=` (ak0130) | yok | Arduino Uno kartı, USB kablosu (devre yok) | çekirdek — dallanmanın ilk dersi | ..\arsiv\kabaMüfredat.docx §024 (115200→9600, print+" "→println, "->" ASCII'ye çevrildi, while(1) yerine sayaç global yapılıp loop()'a bırakıldı) |
+| ak0165 | Rastgele kara şimşek: `random()` | `random(alt, ust)` ile kartın bir sayı seçmesini sağlayabilme; üst sınırın dahil olmadığını açıklayabilme | for/const int (ak0130/ak0140) | dört LED devresi (ak0140, aynen) | ak0140'ın devresi aynen (yeni malzeme yok) | çekirdek — rastgelelik ünite 1'e giriyor | kaba müfredat §025 (kodu yok, fikir kaynağı) + ak0140_karaSimsekFor/ak0140_karaSimsekFor.ino (devre) |
+| ak0170 | Nefes alan LED: `analogWrite` (PWM) | `analogWrite` ile LED parlaklığını 0-255 arasında ayarlayabilme; PWM'i ak0030'daki frekans illüzyonuyla ilişkilendirebilme | hw.gorme-esigi (ak0030), for (ak0130) | 1 LED devresi (yeni: PWM pini) | Arduino Uno kartı, USB kablosu, 1 LED, 1 adet 220 ohm direnç, breadboard, 2 jumper kablo | çekirdek — analog çıkışın ilk dersi | ..\arsiv\002ledParlaklik\002ledParlaklik.ino (analogWrite(11,..)→analogWrite(led,..), 0-200→0-255, iniş/çıkış delay'leri eşitlendi) |
+| ak0180 | İç içe `for`: yıldız karesi | Bir `for`'un içine ikinci bir `for` yerleştirip 2 boyutlu bir desen üretebilme; `Serial.print`/`Serial.println`'i bilinçli olarak birlikte kullanabilme | for (ak0130) | yok | Arduino Uno kartı, USB kablosu (devre yok) | çekirdek — iç içe döngünün ilk dersi | kaba müfredat §029 (5x5 yıldız, kodu yok) + §031 (iç içe for iskeleti, üçgen→kareye uyarlandı) |
 
 ## Kara Kutu Takip Tablosu
 
@@ -64,10 +67,25 @@ kutu emekli oldu.
 **Ek kutu (rotasyon dışı, Özgür'ün isteği — 2026-09-26):** `int taşması`. ak0150'nin
 Merak Köşesi'nde `while (sayac > 0)` + artış + delay yok deneyiyle gösterildi:
 `int` 32767'yi aşınca -32768'e döner, döngü bu yüzden biter. Tek seferlik, rotasyona
-girmez, `long` açılmaz. Kartta çalıştırılıp süresi ölçülmedi — `.ino`'da "kartta
-doğrulandı" **yazılmadı**, kod okunarak ve hesapla (9600 baud, ~200 bin karakter ≈
-birkaç dakika) tahmin edildiği belirtildi; gerçek süre Özgür'ün kart testinden sonra
-girilecek.
+girmez, `long` açılmaz. Süresi **henüz ölçülmedi** — ak0150 Paket 3'te kartta test
+edilip onaylandı ama bu ayrı deneme (taşma) kartta çalıştırılmadı; ".ino"da "kartta
+doğrulandı" hâlâ **yazılmıyor**, gerçek süre ölçülünce buraya da işlenecek.
+
+**İkinci ek kutu (rotasyon dışı — 2026-09-26):** `randomSeed`/`analogRead`. ak0165'te
+Özgür'e sunulan iki seçenekten ("kara kutu olarak gir" ya da "hiç girme") **kara kutu
+olarak girme** seçildi, çünkü SEN YAP zaten öğrenciyi kartı resetleyip aynı rastgele
+sırayı gözlemlemeye yönlendiriyor (kaba müfredat gereği) — bu davranış görülecekse
+sebebi de söylenmeli, sessiz sızma olmasın. `analogRead` bu düzeyde henüz kullanılmıyor,
+yalnız isim veriliyor; açılış yeri "analog giriş" ünitesi (LDR/potansiyometre dersi,
+numarası o tur belirlenecek). `void`/`OUTPUT`/`Serial` rotasyonlarını etkilemez, tek
+seferlik.
+
+**Paket 4 yük freni skorları (2026-09-26):** ak0170 (PWM + frekans illüzyonu köprüsü +
+3 kaynak hatası düzeltmesi) ve ak0180 (iç içe for + print/println bilinçli istisnası)
+Merak Köşesi'nden muaf tutuldu — ikisi de zaten ağır. Bu turda `void`/`OUTPUT`/`Serial`
+rotasyonlarının üçü de emekli durumda olduğundan (açılış dersleri henüz gelmedi) zaten
+rotasyondan seçilebilecek bir kutu yoktu; bu iki ders için yük freni gerekçesi hem
+doğal hem zorunluydu.
 
 | kara kutu | ilk göründüğü ders | açılacağı yer | tur / emekli | Merak Köşesi günlüğü | not |
 |-----------|---------------------|----------------|----------------|----------------------|-----|
@@ -76,9 +94,12 @@ girilecek.
 | `{ }` | ak0010 | ak0020 (açıldı) | rotasyon dışı | — | ak0020'de KAVRAM'da açıldı, kapandı |
 | `;` | ak0010 | ak0020 (açıldı) | rotasyon dışı | — | ak0020'de KAVRAM'da açıldı, kapandı |
 | `Serial ve noktalı yazım` | ak0110 | "fonksiyon" konusu — temel düzeyin ilerisinde, numarası o tur belirlenecek | 3 tur / emekli | ak0110: atlandı (yük freni — yeni seri port aracıyla yeni noktalı yazım birlikte geliyor); ak0120: Serial.begin ve Serial.println'deki nokta, "bu yeteneğe şunu yap demenin yolu" olarak tanıtıldı (1. tur); ak0130: Serial.print ile Serial.println farkı — print aynı satırda kalır, println yeni satıra geçer (2. tur, yeni açı); ak0150: normal sırayla 3. tur burada olacaktı, Özgür'ün isteğiyle köşe `int taşması` ek kutusuna ayrıldı, rotasyon kaymadı (atlanan tur sayılmaz); ak0160: Serial.println bir `if` bloğunun içinde, sadece koşul doğruyken çalışıyor (3. tur, yeni açı) | emekli — açılış dersine ("fonksiyon" konusu) kadar rotasyondan çıktı |
-| `int taşması` (ek kutu) | ak0150 | açılmayacak — `long` bu düzeye girmiyor, yalnız merak bırakıldı | tek seferlik, rotasyon dışı | ak0150: `while (sayac > 0)` + artış + delay yok deneyi — `int` 32767'yi aşınca -32768'e döner, döngü bu yüzden biter. "Kartta doğrulandı" **yazılmadı**; kod okunarak ve hesapla (9600 baud, ~200 bin karakter ≈ birkaç dakika) tahmin edildi, gerçek süre Özgür'ün testinden sonra girilecek | Özgür'ün isteğiyle eklendi, `void`/`OUTPUT`/`Serial` rotasyonlarını etkilemez |
+| `int taşması` (ek kutu) | ak0150 | açılmayacak — `long` bu düzeye girmiyor, yalnız merak bırakıldı | tek seferlik, rotasyon dışı | ak0150: `while (sayac > 0)` + artış + delay yok deneyi — `int` 32767'yi aşınca -32768'e döner, döngü bu yüzden biter. "Kartta doğrulandı" **yazılmadı**; kod okunarak ve hesapla (9600 baud, ~200 bin karakter ≈ birkaç dakika) tahmin edildi, gerçek süre **henüz ölçülmedi** | Özgür'ün isteğiyle eklendi, `void`/`OUTPUT`/`Serial` rotasyonlarını etkilemez |
+| `randomSeed`/`analogRead` (ek kutu) | ak0165 | analog giriş ünitesi (LDR/potansiyometre dersi, numarası o tur belirlenecek) | tek seferlik, rotasyon dışı | ak0165: kartı resetleyince rastgele sayıların hep aynı sırayla geldiği gösterildi — kart aslında önceden hazırlanmış bir listeden sırayla okuyor; gerçek rastgelelik için `randomSeed(analogRead(...))` gerekir, `analogRead` henüz kara kutumuz değil | Özgür'ün "kara kutu olarak gir ya da hiç girme" seçeneklerinden ilki seçildi — SEN YAP zaten bu davranışı gözlemletiyor, sessiz sızma olmasın diye |
 
-**Atlanan dersler (yük freni):** ak0010, ak0020, ak0060, ak0110.
+**Atlanan dersler (yük freni):** ak0010, ak0020, ak0060, ak0110, ak0170 (PWM + frekans
+illüzyonu köprüsü + 3 kaynak hatası düzeltmesi), ak0180 (iç içe for + print/println
+bilinçli istisnası).
 
 ## Ünite 0 — Set Başına Minimum Malzeme
 

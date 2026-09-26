@@ -1,5 +1,26 @@
 # Backlog
 
+- **Karar 14 güncellendi (Özgür + Ortak, 2026-09-26): `ak0182` "yıldız üçgenleri"
+  müfredata giriyor.** Düz üçgen ve ters üçgen ayrı ders değil, **tek** numaralı ders
+  (`ak0182`) — iki ayrı ders olsaydı ak0180 ile birlikte art arda üç ekran dersi
+  gelirdi. Ekran dersi, tek yeni fikir: içteki döngünün sınırı dıştaki döngüye bağlı
+  (`sutun <= satir`). Tasarım ve Yol Haritası (Ev tarafında) güncellendi. `meydanOkuma/
+  yildizUcgeni.md` şimdilik yerinde kalıyor — ak0182 üretilirken zor desenlere
+  (baklava, içi boş üçgen) dönüştürülecek. **ak0182'nin iş emri Paket 5 kapandıktan
+  sonra gelecek, şimdi üretilmiyor.**
+- **ak0165/ak0170/ak0180 kartta test edildi, onaylandı (2026-09-26).** Ortak'ın iş emri
+  (`zihinEv/🏰 300-Projects/arduinoMufredat/is-emri-ak-unite1-paket4.md`) üzerine
+  üretildi: `random()` (ak0165, yeni ders, ak0140 devresi), nefes alan LED / `analogWrite`
+  (ak0170, kaynaktaki 3 hata düzeltildi), iç içe `for` / yıldız karesi (ak0180,
+  `Serial.print`/`println`'in bilinçli istisnası). `randomSeed`/`analogRead` ek kutu
+  olarak ak0165'e girdi (analog giriş ünitesinde açılacak). Kart testinde ak0165'te
+  iki sorun çıktı, düzeltildi: (1) zar atışları Seri Monitör açılmadan önce yazılıp
+  kayboluyordu → `Serial.begin`'den sonra `delay(2500);` eklendi; (2) pin 8-11 geçişleri
+  takip edilemiyordu → LED yanık süresi `delay(1500)`'e çıkarıldı, `delay(200)` karanlık
+  ara eklendi; ayrıca ekrana "Zar: "/"LED: " etiketleri ve "neden hep aynı sıra geliyor"
+  sorusu SEN YAP'a eklendi. ak0180'e SEN YAP 4 eklendi (5x5 karede tek hücreyi `&&`/`else`
+  olmadan iç içe `if` ile değiştirme). meydanOkuma/'ya `yildizUcgeni.md` kartı eklendi.
+  Ünite 1 Paket 4 kapandı.
 - **ak0150/ak0155/ak0160 kartta test edildi, onaylandı (2026-09-26).** Ortak'ın iş emri
   (`zihinEv/🏰 300-Projects/arduinoMufredat/is-emri-ak-unite1-paket3.md`) üzerine
   üretildi: `while`, sonsuz döngü (`while(true)`, yeni ders), `if` + `%`. Kaynaklar

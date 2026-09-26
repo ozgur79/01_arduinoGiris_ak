@@ -73,7 +73,11 @@ O yüzden listedeki bir şeyi anlamıyorsan bu normaldir, sırası gelecek.
 | 13 | `ak0150_while` | Sayma işini `while` ile yazma | yayında |
 | 14 | `ak0155_sonsuzDongu` | `loop()`'un aslında sonsuz bir döngü olduğunu görme | yayında |
 | 15 | `ak0160_tekSayilar` | `if` ve `%` ile yalnız tek sayıları yazdırma | yayında |
+| 16 | `ak0165_rastgeleKaraSimsek` | `random()` ile kartın rastgele bir LED seçmesi | yayında |
+| 17 | `ak0170_nefesAlanLed` | `analogWrite` (PWM) ile yavaşça parlayıp sönen LED | yayında |
+| 18 | `ak0180_yildizKaresi` | İç içe `for` ile ekrana yıldız karesi çizme | yayında |
 
 Bu tablo her yeni ders eklendiğinde güncellenir. "Sırada ne var" diye buraya bak.
 LED bloğu yedi derste tamamlandı. Seri port bloğunda kartın yaptığı işi bilgisayara
-yazdırmaya başladık; döngüler ve ilk dallanma (`if`) geldi, sırada buton var.
+yazdırmaya başladık; döngüler, ilk dallanma (`if`), rastgelelik ve PWM geldi, sırada
+buton var.

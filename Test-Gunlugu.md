@@ -15,3 +15,6 @@
 | ak0150 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti |
 | ak0155 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti |
 | ak0160 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti |
+| ak0165 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti (düzeltmeler sonrası) |
+| ak0170 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti |
+| ak0180 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti |

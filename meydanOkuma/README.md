@@ -34,9 +34,9 @@ Her kart tek bir `.md` dosyası, dört başlık:
 
 ## Şu an mevcut kartlar
 
-Henüz kart yok. Kartlar, kullandıkları alet ana sırada öğretildikçe eklenir.
+- `yildizUcgeni.md` — ak0180 (iç içe for) sonrası. Yıldız karesini üçgene çevirme.
 
 **Sırada gelecekler** (ünite 1, seri port ve döngü dersleri üretildikçe):
-`for` sonrası — yıldız üçgeni, ters yıldız üçgeni, 1'den 50'ye beşerli satırlar ·
-`while` sonrası — aynı desenler `while` ile · `if` ve `%` sonrası — TEK/ÇİFT yazdırma,
-5'in katlarında "BOM" · rasgele sayı — 1-100 arası on sayı üret.
+ters yıldız üçgeni, 1'den 50'ye beşerli satırlar · `while` sonrası — aynı desenler
+`while` ile · `if` ve `%` sonrası — TEK/ÇİFT yazdırma, 5'in katlarında "BOM" ·
+rasgele sayı — 1-100 arası on sayı üret.

@@ -56,6 +56,9 @@ gerekçenin dayandığı örnek artık geçersiz, güncel durum bu paragrafta.
 | cpp.if | `if (koşul) { }` koşul doğruysa içindeki blok çalışır, yanlışsa atlanır (bu düzeyde `else` yok) | ak0160 |
 | cpp.kalan | `%` (kalan) operatörü bir bölmenin kalanını verir; `sayac % 2` çift sayılarda 0, tek sayılarda 1 verir | ak0160 |
 | cpp.karsilastirma | `==`, `!=` gibi karşılaştırma operatörleri iki değeri kıyaslayıp doğru/yanlış üretir; `<=` ak0130'da `for`'un koşulunda dolaylı kullanılmıştı, ak0160'ta `==`/`!=` ile adlandırılıp genişletildi | ak0130 (dolaylı, `<=`) / ak0160 (adlandırıldı) |
+| cpp.random | `random(alt, ust)` kartın alt (dahil) ile ust (hariç) arasında rastgele bir sayı seçmesini sağlar; üst sınır asla gelmez | ak0165 |
+| cpp.analogwrite | `analogWrite(pin, deger)` yalnız ~ işaretli pinlerde 0-255 arası bir değerle "arada" bir çıkış verir (PWM); `digitalWrite`'ın yalnız HIGH/LOW verebilmesinden farklıdır | ak0170 |
+| cpp.ic_ice_for | Bir `for` döngüsünün gövdesine ikinci bir `for` döngüsü konabilir; dıştaki bir kez ilerlerken içteki baştan sona çalışır | ak0180 |
 | cpp.digitalread | `digitalRead()` ile bir giriş pininin `HIGH` mi `LOW` mu olduğu okunur | dk0050 *(Deneyap — Ünite 2/`ak02xx` bu id'yi ak tarafında henüz üretmedi, dilim stratejisi gereği dk önce vardı)* |
 | cpp.if-else | `if (...) { }` koşul doğruysa çalışır, `else { }` yanlışsa çalışır — karar dallanması | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
 | hw.buton-devre | Butonu breadboard üzerinde giriş pinine bağlama; basılı/basılı değil iki durumu `digitalRead` ile ayırt etme | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
