@@ -51,6 +51,11 @@ gerekçenin dayandığı örnek artık geçersiz, güncel durum bu paragrafta.
 | cpp.atama | `sayac = sayac + 1;` matematiksel eşitlik değildir: eşittirin sağı önce hesaplanır, sonuç soldaki isme atanır | ak0120 |
 | cpp.for | `for (başlangıç; koşul; artış) { }` ile sayma işinin üç parçası tek satırda toplanır; koşul doğru olduğu sürece blok tekrar çalışır | ak0130 |
 | cpp.arttirma | `sayac++` / `sayac--`, `sayac = sayac + 1;` / `sayac = sayac - 1;`'in kısa yazılışıdır | ak0130 |
+| cpp.while | `while (koşul) { }` ile `for`'un tek satırda topladığı üç parça (başlangıç, koşul, artış) yeniden ayrı ayrı yazılır; koşul doğru olduğu sürece blok tekrar çalışır | ak0150 |
+| cpp.sonsuz_dongu | `while (true)` (ya da `while (1)`), koşulu hiç yanlış olmayan, kendiliğinden bitmeyen bir döngü kurar; `loop()`'un kendisi de böyle bir döngüdür | ak0155 |
+| cpp.if | `if (koşul) { }` koşul doğruysa içindeki blok çalışır, yanlışsa atlanır (bu düzeyde `else` yok) | ak0160 |
+| cpp.kalan | `%` (kalan) operatörü bir bölmenin kalanını verir; `sayac % 2` çift sayılarda 0, tek sayılarda 1 verir | ak0160 |
+| cpp.karsilastirma | `==`, `!=` gibi karşılaştırma operatörleri iki değeri kıyaslayıp doğru/yanlış üretir; `<=` ak0130'da `for`'un koşulunda dolaylı kullanılmıştı, ak0160'ta `==`/`!=` ile adlandırılıp genişletildi | ak0130 (dolaylı, `<=`) / ak0160 (adlandırıldı) |
 | cpp.digitalread | `digitalRead()` ile bir giriş pininin `HIGH` mi `LOW` mu olduğu okunur | dk0050 *(Deneyap — Ünite 2/`ak02xx` bu id'yi ak tarafında henüz üretmedi, dilim stratejisi gereği dk önce vardı)* |
 | cpp.if-else | `if (...) { }` koşul doğruysa çalışır, `else { }` yanlışsa çalışır — karar dallanması | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
 | hw.buton-devre | Butonu breadboard üzerinde giriş pinine bağlama; basılı/basılı değil iki durumu `digitalRead` ile ayırt etme | dk0050 *(Deneyap — bkz. yukarıdaki not)* |

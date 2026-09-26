@@ -19,6 +19,9 @@ yüzler = ünite/blok (0 = LED), onlar+birler = ders sırası.
 | ak0120 | Sayaç: kart saysın, ekrana yazsın | Program çalışırken değeri değişebilen bir isim (değişken) tanımlayabilme; `sayac = sayac + 1;` satırının eşitliğin sağının önce hesaplanıp sola atandığını açıklayabilme | Serial.begin/println (ak0110) | yok | Arduino Uno kartı, USB kablosu (devre yok) | çekirdek — `for`'un önkoşulu | ..\arsiv\009ak120ham\009ak120ham.ino (Özgür yazdı; 115200→9600, sayac++→sayac=sayac+1, Serial.print(" ")→Serial.println) |
 | ak0130 | `for`: sayma işini tek satıra topla | `for` döngüsünün üç bölmesini (başlangıç, koşul, artış) tanıyıp kullanabilme; `sayac++`'ın `sayac = sayac + 1;`'in kısa yazılışı olduğunu açıklayabilme | değişken/atama (ak0120) | yok | Arduino Uno kartı, USB kablosu (devre yok) | çekirdek — döngülerin ilk dersi | ..\arsiv\002for1den100e\002for1den100e.ino (0-255→1-10, 1000ms→500ms, "Sayaç Değeri: "→"Sayac: ", kullanılmayan `int degisken;` silindi) |
 | ak0140 | Kara şimşek, `for` ile (harcama dersi) | `for` ile ardışık pinleri tek döngüde yönetebilme; elle yazılmış kodla `for` ile yazılmış kodu satır sayısı üzerinden karşılaştırabilme | `for`/`sayac++` (ak0130), const int/çoklu çıkış (ak0060) | dört LED devresi (ak0060, aynen) | ak0060'ın devresi aynen (yeni malzeme yok) | genişletme — `for` pekiştirmesi, yeni kazanım yok | ..\arsiv\004karaSimsekIleri\004karaSimsekIleri.ino (dizi kaldırıldı, desen hatası düzeltildi) + ak0060_karaSimsek/ak0060_karaSimsek.ino |
+| ak0150 | `while`: olduğu sürece say | `while` döngüsünün koşul-blok yapısını kurabilme; `for`'un tek satırda topladığı üç parçayı (başlangıç, koşul, artış) ayrı ayrı yazabilme | `for`/`sayac++`/değişken (ak0130, ak0120) | yok | Arduino Uno kartı, USB kablosu (devre yok) | çekirdek — döngülerin ikinci biçimi | ..\arsiv\kabaMüfredat.docx §023 (115200→9600, print+" "→println) |
+| ak0155 | Sonsuz döngü: `loop()` aslında ne? (harcama) | `while (true)` ile koşulu hiç yanlış olmayan bir döngü kurabilme; `loop()`'un kendisinin de bir sonsuz döngü olduğunu açıklayabilme | `while` (ak0150) | dahili LED (ak0010, aynen) | sadece Arduino Uno kartı, USB kablosu | genişletme — yeni fikir `while(true)` | kendi ak0010_dahiliLed.ino'n |
+| ak0160 | Tek sayılar: `if` + `%` | `if` ile koşullu çalıştırma yapabilme; `%` (kalan) ile bir sayının tek/çift olduğunu belirleyebilme; `==`/`!=` karşılaştırma operatörlerini `<=` ile ilişkilendirebilme | sonsuz döngü (ak0155), değişken (ak0120), `<=` (ak0130) | yok | Arduino Uno kartı, USB kablosu (devre yok) | çekirdek — dallanmanın ilk dersi | ..\arsiv\kabaMüfredat.docx §024 (115200→9600, print+" "→println, "->" ASCII'ye çevrildi, while(1) yerine sayaç global yapılıp loop()'a bırakıldı) |
 
 ## Kara Kutu Takip Tablosu
 
@@ -50,7 +53,21 @@ atlandı; sıradaki `void` 3. tur kaymadı. ak0115 = `void` (3. tur); kutu emekl
 ak0120 = `Serial ve noktalı yazım` (1. tur, yeni rotasyon başladı). ak0130 =
 `Serial ve noktalı yazım` (2. tur, yeni açı: `Serial.print` vs `Serial.println`).
 ak0140 = `OUTPUT` (3. tur, yeni açı: `for` ile tek satırda dört pine birden yazılması);
+kutu emekli oldu. ak0150'de normal sırayla `Serial ve noktalı yazım`'ın 3. turu
+gelecekti; Özgür'ün isteğiyle bu turda köşe ek bir kutuya (`int taşması`) ayrıldı,
+rotasyon kaymadı — `Serial ve noktalı yazım` 2 turda kaldı. ak0155 köşesiz değil ama
+rotasyon dışı: `while(1)` ile `while(true)` farkı, `{ }`/`;`'nin ak0020'de olduğu gibi
+hemen açıklanıp kapatıldı (kutu değil, tek seferlik köprü notu). ak0160 =
+`Serial ve noktalı yazım` (3. tur, yeni açı: `if` bloğunun içinde koşullu çalışması);
 kutu emekli oldu.
+
+**Ek kutu (rotasyon dışı, Özgür'ün isteği — 2026-09-26):** `int taşması`. ak0150'nin
+Merak Köşesi'nde `while (sayac > 0)` + artış + delay yok deneyiyle gösterildi:
+`int` 32767'yi aşınca -32768'e döner, döngü bu yüzden biter. Tek seferlik, rotasyona
+girmez, `long` açılmaz. Kartta çalıştırılıp süresi ölçülmedi — `.ino`'da "kartta
+doğrulandı" **yazılmadı**, kod okunarak ve hesapla (9600 baud, ~200 bin karakter ≈
+birkaç dakika) tahmin edildiği belirtildi; gerçek süre Özgür'ün kart testinden sonra
+girilecek.
 
 | kara kutu | ilk göründüğü ders | açılacağı yer | tur / emekli | Merak Köşesi günlüğü | not |
 |-----------|---------------------|----------------|----------------|----------------------|-----|
@@ -58,7 +75,8 @@ kutu emekli oldu.
 | `OUTPUT` | ak0010 | buton dersi (ünite 2), INPUT ile birlikte | 3 tur / emekli | ak0040: pinMode satırında pine ne iş yapacağını söylersin; OUTPUT = bu pin dışarı elektrik verecek. Görev bir kez seçildiği için satır setup'ta durur; ak0070: üç rengin her birini açıp kapatabilmek için üç pine de OUTPUT yazılır (2. tur, yeni açı); ak0140: dört pin için OUTPUT artık elle değil `for` ile tek satırda tekrarlanıyor, OUTPUT'un kendisi değişmedi (3. tur, yeni açı) | emekli — açılış dersine (buton, ünite 2) kadar rotasyondan çıktı |
 | `{ }` | ak0010 | ak0020 (açıldı) | rotasyon dışı | — | ak0020'de KAVRAM'da açıldı, kapandı |
 | `;` | ak0010 | ak0020 (açıldı) | rotasyon dışı | — | ak0020'de KAVRAM'da açıldı, kapandı |
-| `Serial ve noktalı yazım` | ak0110 | "fonksiyon" konusu — temel düzeyin ilerisinde, numarası o tur belirlenecek | 2 tur | ak0110: atlandı (yük freni — yeni seri port aracıyla yeni noktalı yazım birlikte geliyor); ak0120: Serial.begin ve Serial.println'deki nokta, "bu yeteneğe şunu yap demenin yolu" olarak tanıtıldı (1. tur); ak0130: Serial.print ile Serial.println farkı — print aynı satırda kalır, println yeni satıra geçer (2. tur, yeni açı) | rotasyonda — `void`/`OUTPUT` rotasyonundan bağımsız, kendi 3 turluk döngüsünde |
+| `Serial ve noktalı yazım` | ak0110 | "fonksiyon" konusu — temel düzeyin ilerisinde, numarası o tur belirlenecek | 3 tur / emekli | ak0110: atlandı (yük freni — yeni seri port aracıyla yeni noktalı yazım birlikte geliyor); ak0120: Serial.begin ve Serial.println'deki nokta, "bu yeteneğe şunu yap demenin yolu" olarak tanıtıldı (1. tur); ak0130: Serial.print ile Serial.println farkı — print aynı satırda kalır, println yeni satıra geçer (2. tur, yeni açı); ak0150: normal sırayla 3. tur burada olacaktı, Özgür'ün isteğiyle köşe `int taşması` ek kutusuna ayrıldı, rotasyon kaymadı (atlanan tur sayılmaz); ak0160: Serial.println bir `if` bloğunun içinde, sadece koşul doğruyken çalışıyor (3. tur, yeni açı) | emekli — açılış dersine ("fonksiyon" konusu) kadar rotasyondan çıktı |
+| `int taşması` (ek kutu) | ak0150 | açılmayacak — `long` bu düzeye girmiyor, yalnız merak bırakıldı | tek seferlik, rotasyon dışı | ak0150: `while (sayac > 0)` + artış + delay yok deneyi — `int` 32767'yi aşınca -32768'e döner, döngü bu yüzden biter. "Kartta doğrulandı" **yazılmadı**; kod okunarak ve hesapla (9600 baud, ~200 bin karakter ≈ birkaç dakika) tahmin edildi, gerçek süre Özgür'ün testinden sonra girilecek | Özgür'ün isteğiyle eklendi, `void`/`OUTPUT`/`Serial` rotasyonlarını etkilemez |
 
 **Atlanan dersler (yük freni):** ak0010, ak0020, ak0060, ak0110.
 

@@ -1,5 +1,13 @@
 # Backlog
 
+- **ak0150/ak0155/ak0160 kartta test edildi, onaylandı (2026-09-26).** Ortak'ın iş emri
+  (`zihinEv/🏰 300-Projects/arduinoMufredat/is-emri-ak-unite1-paket3.md`) üzerine
+  üretildi: `while`, sonsuz döngü (`while(true)`, yeni ders), `if` + `%`. Kaynaklar
+  `.ino` değil `arsiv\kabaMüfredat.docx` madde 023/024. Test sonrası ak0150'nin
+  while bloğuna `Serial.println`'den sonra `delay(500);` eklendi (ak0130 ile aynı
+  ritim, Özgür istedi) — `.ino`, `cozumler/` ve `ders.md` §5'te. ak0150'nin Merak
+  Köşesi'ndeki `int` taşması denemesinin süresi **henüz ölçülmedi**; "kartta
+  doğrulanacak" ifadesi olduğu gibi bırakıldı. Ünite 1 Paket 3 kapandı.
 - **ak0120/ak0130/ak0140 kartta test edildi, onaylandı (2026-09-26).** Ortak'ın iş emri
   (`zihinEv/🏰 300-Projects/arduinoMufredat/is-emri-ak-unite1-paket2.md`) üzerine
   üretildi: Sayaç (değişken/atama), `for`, Kara şimşek-`for`. Kaynaklar arşive
