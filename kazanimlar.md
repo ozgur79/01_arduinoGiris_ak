@@ -59,6 +59,10 @@ gerekçenin dayandığı örnek artık geçersiz, güncel durum bu paragrafta.
 | cpp.random | `random(alt, ust)` kartın alt (dahil) ile ust (hariç) arasında rastgele bir sayı seçmesini sağlar; üst sınır asla gelmez | ak0165 |
 | cpp.analogwrite | `analogWrite(pin, deger)` yalnız ~ işaretli pinlerde 0-255 arası bir değerle "arada" bir çıkış verir (PWM); `digitalWrite`'ın yalnız HIGH/LOW verebilmesinden farklıdır | ak0170 |
 | cpp.ic_ice_for | Bir `for` döngüsünün gövdesine ikinci bir `for` döngüsü konabilir; dıştaki bir kez ilerlerken içteki baştan sona çalışır | ak0180 |
+| cpp.dizi | `const int dizi[n] = {...};` birden fazla değeri TEK bir isimde saklar; pinler ardışık olmadığında "ilk pin, son pin" kalıbı yetmez | ak0185 |
+| cpp.dizi_indeks | Dizi SIFIRDAN indekslenir: `dizi[0]` ilk eleman, `dizi[n-1]` son elemandır; `dizi[n]` diye bir eleman yoktur (kart hata vermeden rastgele davranabilir) | ak0185 |
+| cpp.millis | `millis()` kart açıldığından beri geçen milisaniyeyi döndürür; `delay()`'in aksine programı bekletmez, yalnızca zamanı okur | ak0195 |
+| cpp.unsigned_long | `unsigned long`, `millis()`'in döndürdüğü, `int`'ten çok daha büyük ve hep pozitif bir sayı türüdür; ayrıntısı ileri düzeyde açılacak | ak0195 |
 | cpp.digitalread | `digitalRead()` ile bir giriş pininin `HIGH` mi `LOW` mu olduğu okunur | dk0050 *(Deneyap — Ünite 2/`ak02xx` bu id'yi ak tarafında henüz üretmedi, dilim stratejisi gereği dk önce vardı)* |
 | cpp.if-else | `if (...) { }` koşul doğruysa çalışır, `else { }` yanlışsa çalışır — karar dallanması | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
 | hw.buton-devre | Butonu breadboard üzerinde giriş pinine bağlama; basılı/basılı değil iki durumu `digitalRead` ile ayırt etme | dk0050 *(Deneyap — bkz. yukarıdaki not)* |

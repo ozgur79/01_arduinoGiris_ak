@@ -1,5 +1,36 @@
 # Backlog
 
+- **ak0185/ak0190/ak0195 kartta test edildi, onaylandı (2026-09-28).** Ünite 1 Paket 5
+  kapandı. Test-Gunlugu.md ve README.md "teste hazır" → "yayında" güncellendi.
+- **Ortak denetimi sonrası iki düzeltme, ak0185/ak0190 (2026-09-26).**
+  (1) ak0190'da basamak yönü tersti — en soldaki LED (pin 3) 1'ler basamağıydı,
+  öğrenci soldan sağa okuyunca ikilik sayıyı ters görürdü. Eşleme çevrildi: pin 9
+  (en sağ) = 1'ler, pin 6 = 2'ler, pin 5 = 4'ler, pin 3 (en sol) = 8'ler — onluk
+  sayılardaki gibi birler basamağı sağda. `.ino`, `cozumler/`, `ders.md` (board.bit_sirasi,
+  §4, §7 mini sınav) güncellendi. (2) ak0185'te acı yalnız anlatılmıştı, Karar 12
+  gereği (acı çekilmeden öğretilmez) SEN YAP 1'e taşındı: öğrenci ak0140 kodunu
+  ilkLed=3/sonLed=9 ile bu devreye kendisi yükleyip ritmin 4/7/8'de bozulduğunu
+  görüyor, bozuk kod ayrıca şevkedilmedi (ak0140 zaten elinde). Ayrıca Özgür'ün kart
+  testinde fark ettiği bir üçüncü şey düzeltildi: **jumper sayısı** — dirençler ortak
+  GND hattına alınırsa LED başına ayrı GND jumper'ı gerekmez (4 LED = 5 jumper, 8
+  değil). ak0185/ak0190'da 8→5, ak0195'te 4→3 (sıfırdan kuruluyorsa) yapıldı, devre
+  kurulumu adımları "ortak GND hattı, tek jumper" diye netleştirildi. ak0195'e
+  dokunulmadı (zaten temizdi, sadece jumper sayısı düzeltildi).
+- **Ünite 1 Paket 5 üretildi, teste hazır (2026-09-26).** Ortak'ın iş emri
+  (`zihinEv/🏰 300-Projects/arduinoMufredat/is-emri-ak-unite1-paket5.md`) üzerine
+  ak0185 (dizi), ak0190 (binary sayıcı, harcama), ak0195 (`millis()` 1. tur) üretildi.
+  Üçü de aynı devrede: 4 LED, pin 3/5/6/9 (ardışık değil — dizinin gerekçesi bu).
+  Kaynaklar arşive kopyalandı (`005binarySayici`, `003ikiLed_saniyede1saniyede2`;
+  `004karaSimsekIleri` zaten arşivdeydi). ak0190'da kaynağın üç hatası (pinMode ile
+  LED söndürme, gölgelenen `i`, `else` kullanımı) düzeltildi, gerekçe `ders.md` §5'te.
+  ak0195'te `unsigned long` ak0150'nin `int taşması`na bağlanarak tek cümleyle
+  tanıtıldı (ek kutu, rotasyon dışı); LED durumu `!`/`else` olmadan `1 - durum` ile
+  çevrildi; "butona basınca ne olur" sorusu Ünite 3'e köprü olarak bırakıldı.
+  ak0185/ak0190/ak0195 Merak Köşesi'nden yük freniyle muaf (üçü de zaten ağır dersler).
+  `.ino`/`ders.md` + `cozumler/` + `mufredat.md` + `kazanimlar.md` (cpp.dizi,
+  cpp.dizi_indeks, cpp.millis, cpp.unsigned_long) + Kara Kutu tablosu güncellendi.
+  **Commit atılmadı** (Paket 4'ten ayrı tutuldu) — Özgür kartta test edecek, Ortak
+  denetleyecek. Test-Gunlugu.md'ye üçü için "teste hazır" satırı eklendi.
 - **Karar 14 güncellendi (Özgür + Ortak, 2026-09-26): `ak0182` "yıldız üçgenleri"
   müfredata giriyor.** Düz üçgen ve ters üçgen ayrı ders değil, **tek** numaralı ders
   (`ak0182`) — iki ayrı ders olsaydı ak0180 ile birlikte art arda üç ekran dersi

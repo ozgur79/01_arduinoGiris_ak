@@ -76,8 +76,11 @@ O yüzden listedeki bir şeyi anlamıyorsan bu normaldir, sırası gelecek.
 | 16 | `ak0165_rastgeleKaraSimsek` | `random()` ile kartın rastgele bir LED seçmesi | yayında |
 | 17 | `ak0170_nefesAlanLed` | `analogWrite` (PWM) ile yavaşça parlayıp sönen LED | yayında |
 | 18 | `ak0180_yildizKaresi` | İç içe `for` ile ekrana yıldız karesi çizme | yayında |
+| 19 | `ak0185_dizi` | Dizi ile pinler ardışık olmayınca kara şimşek kurma | yayında |
+| 20 | `ak0190_binarySayici` | Dizi + `if` + `%` ile LED'lerin ikilik saydığını görme | yayında |
+| 21 | `ak0195_millisIlkTur` | `millis()` ile iki LED'i bağımsız hızlarda yakma | yayında |
 
 Bu tablo her yeni ders eklendiğinde güncellenir. "Sırada ne var" diye buraya bak.
 LED bloğu yedi derste tamamlandı. Seri port bloğunda kartın yaptığı işi bilgisayara
-yazdırmaya başladık; döngüler, ilk dallanma (`if`), rastgelelik ve PWM geldi, sırada
-buton var.
+yazdırmaya başladık; döngüler, ilk dallanma (`if`), rastgelelik, PWM, dizi ve `millis()`
+geldi, sırada buton var.

@@ -18,3 +18,6 @@
 | ak0165 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti (düzeltmeler sonrası) |
 | ak0170 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti |
 | ak0180 | 2026-09-26 | ✓ | ✓ | — | Özgür kartta test etti |
+| ak0185 | 2026-09-28 | ✓ | ✓ | — | Özgür kartta test etti |
+| ak0190 | 2026-09-28 | ✓ | ✓ | — | Özgür kartta test etti |
+| ak0195 | 2026-09-28 | ✓ | ✓ | — | Özgür kartta test etti |
