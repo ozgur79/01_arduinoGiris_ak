@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 11 numaralı pindeki LED'in parlaklığını yavaşça 0'dan 255'e artırıp sonra tekrar
+  0'a düşürür (analogWrite); LED nefes alıyormuş gibi görünür ve bu sürekli tekrar eder.
+*/
+
+/*
   ak0170 — Nefes alan LED: analogWrite (PWM)
   Ne öğreneceğiz: analogWrite — LED yalnız açık/kapalı değil, ARASI da var (0-255)
   Malzeme: Arduino Uno kartı, USB kablosu, 1 LED, 1 adet 220 ohm direnç, breadboard,

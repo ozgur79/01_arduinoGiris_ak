@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, önce 1-6 arası 5 rastgele zar sayısını Seri Monitör'e yazar. Sonra sürekli olarak
+  8-11 numaralı pinlerden rastgele birini seçip o LED'i 1,5 saniye yakar ve hangi pin olduğunu yazar.
+*/
+
+/*
   ak0165 — Rastgele kara şimşek: random()
   Ne öğreneceğiz: random(alt, ust) — kart bir sayı "seçer", sen önceden bilemezsin;
     üst sınır DAHİL DEĞİLDİR

@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 8 numaralı pine bağlı LED'i yarım saniye yakıp yarım saniye söndürür
+  ve bunu sürekli tekrar eder (ak0020'den iki kat hızlı).
+*/
+
+/*
   ak0030 — LED'i hızlandır
   Ne öğreneceğiz: Yanıp sönmeyi hızlandırmanın bir sınırı vardır; o sınırdan sonra göz
     sönmeyi ayırt edemez ve LED sürekli yanıyormuş gibi görünür

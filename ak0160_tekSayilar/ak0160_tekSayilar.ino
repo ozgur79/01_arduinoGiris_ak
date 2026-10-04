@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 1'den başlayıp sürekli sayar ama yalnız TEK sayıları Seri Monitör'e yazar
+  (if ve % kalan işlemiyle).
+*/
+
+/*
   ak0160 — Tek sayılar: if + %
   Ne öğreneceğiz: if (koşul doğruysa çalış) ve % (kalan) — ikisi birlikte, % burada
     if'in koşulunu kurmak için bir alet

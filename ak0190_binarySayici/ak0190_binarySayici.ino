@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 0'dan 15'e her saniye sayar ve sayıyı 3, 5, 6, 9 numaralı pinlerdeki 4 LED'de ikilik
+  (binary) olarak gösterir. Sayı Seri Monitör'e de yazılır; 15'ten sonra baştan başlar.
+*/
+
+/*
   ak0190 — Binary sayıcı (harcama)
   Ne öğreneceğiz: Yeni fikir yok, bilerek — ak0120 (sayaç), ak0160 (if + %) ve
     ak0185 (dizi) burada birlikte çalışıyor: 4 LED 0'dan 15'e kadar İKİLİK (binary)

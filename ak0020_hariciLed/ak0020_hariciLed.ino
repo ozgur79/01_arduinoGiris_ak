@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 8 numaralı pine bağlı harici LED'i 1 saniye yakıp 1 saniye söndürür
+  ve bunu sürekli tekrar eder.
+*/
+
+/*
   ak0020 — Harici LED'i yakıp söndür
   Ne öğreneceğiz: LED'i Arduino kartının dışında, bir devre üzerinde bağlayıp yakmak
   Malzeme: Arduino Uno kartı, USB kablosu, 1 LED, 1 adet 220 ohm direnç, breadboard,

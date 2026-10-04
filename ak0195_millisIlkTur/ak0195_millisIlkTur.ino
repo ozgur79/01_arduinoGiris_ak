@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, millis() ile iki LED'i aynı anda farklı hızlarda yakıp söndürür: 3 numaralı pindeki LED
+  saniyede yaklaşık 1, 9 numaralı pindeki LED saniyede yaklaşık 3 kez yanıp söner. delay() kullanılmaz.
+*/
+
+/*
   ak0195 — millis() 1. tur: iki LED, iki ritim
   Ne öğreneceğiz: millis() — kart açıldığından beri geçen milisaniyeyi okuyan bir
     "saat"; delay() gibi programı BEKLETMEZ, sen zamanı okursun

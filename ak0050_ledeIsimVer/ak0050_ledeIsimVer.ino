@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, ak0040 ile aynı işi yapar: 8 numaralı (kırmızı) ve 9 numaralı (yeşil) LED'i sırayla yakar.
+  Fark: pin numaraları yerine LED'lere isim verilmiştir (kirmizi, yesil).
+*/
+
+/*
   ak0050 — LED'e isim ver
   Ne öğreneceğiz: Pin numarası yerine ona kendi verdiğin bir isim kullanmak; pin
     değişince tek satırı düzeltmenin yetmesi

@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 13 numaralı pindeki dahili LED'i 1 saniye yakıp 1 saniye söndürür (ak0010 gibi).
+  Fark: yanıp sönme loop() yerine setup() içindeki sonsuz bir while (true) döngüsünde yapılır.
+*/
+
+/*
   ak0155 — Sonsuz döngü: loop() aslında ne? (harcama)
   Ne öğreneceğiz: Yeni fikir yok, bilerek: loop() aslında kartın senin yerine yazdığı
     sonsuz bir döngüdür. while (true) ile aynı döngüyü kendi ellerinle yazacaksın.

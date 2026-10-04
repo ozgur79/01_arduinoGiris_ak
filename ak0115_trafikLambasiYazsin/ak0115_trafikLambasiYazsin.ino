@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, ak0070'teki trafik lambasını (pin 8 kırmızı, 9 sarı, 10 yeşil) çalıştırır ve her renk
+  yanarken Seri Monitör'e o rengin adını (KIRMIZI, YESIL, SARI) yazar.
+*/
+
+/*
   ak0115 — Trafik lambası rengini yazsın
   Ne öğreneceğiz: Bildiğimiz trafik lambasına, yanan rengi bilgisayara yazdırma
     katmanı eklemek

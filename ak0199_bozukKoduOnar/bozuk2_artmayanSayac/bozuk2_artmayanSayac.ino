@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 3, 5, 6, 9 numaralı pinlerdeki 4 LED'i sırayla yakıp söndürmek İÇİN yazıldı
+  ama istenen gibi çalışmıyor. Görevin: nedenini bul ve düzelt.
+*/
+
+/*
   ak0199 — Bozuk kod 2/3: artmayan sayaç
   Bu dosya ak0199 "Bozuk kodu onar" dersinin İKİNCİ parçası. Görev, yöntem ve
   ipuçları ana klasördeki ders.md'de — burada sadece bozuk kod var.

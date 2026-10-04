@@ -1,4 +1,9 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, iç içe iki for ile Seri Monitör'e 5 satır x 5 sütunluk bir yıldız (*) karesi çizer.
+*/
+
+/*
   ak0180 — İç içe for: yıldız karesi
   Ne öğreneceğiz: Bir for'un İÇİNDE başka bir for — dıştaki satırı sayar, içteki
     satırdaki yıldızları sayar

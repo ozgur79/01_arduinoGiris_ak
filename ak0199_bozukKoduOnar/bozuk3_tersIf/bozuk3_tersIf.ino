@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 0'dan 15'e sayıp sayıyı 3, 5, 6, 9 numaralı pinlerdeki 4 LED'de ikilik (binary) göstermek
+  İÇİN yazıldı ama LED'ler bazı sayılarda yanlış yanıyor. Görevin: nedenini bul ve düzelt.
+*/
+
+/*
   ak0199 — Bozuk kod 3/3: ters if (binary sayıcı)
   Bu dosya ak0199 "Bozuk kodu onar" dersinin ÜÇÜNCÜ parçası. Görev, yöntem ve
   ipuçları ana klasördeki ders.md'de — burada sadece bozuk kod var.

@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, for döngüsüyle 1'den 10'a kadar sayar ve her sayıyı yarım saniye arayla
+  Seri Monitör'e yazar. Sayma bir kez yapılır, sonra program durur.
+*/
+
+/*
   ak0130 — for: sayma işini tek satıra topla
   Ne öğreneceğiz: for döngüsü — ak0120'de dağınık duran üç parçayı (başlangıç, koşul,
     artış) tek satırda toplamak

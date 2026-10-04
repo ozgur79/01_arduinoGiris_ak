@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, Seri Monitör'den gönderdiğin karakteri okur: '1' yazarsan 9 numaralı pindeki LED yanar,
+  '0' yazarsan söner.
+*/
+
+/*
   ak0197 — Serial.read: klavyeden komutla LED
   Ne öğreneceğiz: seri port İKİ YÖNLÜ — kart şimdiye kadar hep yazdı, şimdi
     DİNLİYOR da; Serial.read() ile Seri Monitör'e yazdığın harfi okuyup LED'i ona

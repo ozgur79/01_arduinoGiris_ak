@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 3, 5, 6, 9 numaralı pinlerdeki 4 LED'de kara şimşek efekti verir. Pinler ardışık olmadığı
+  için bir dizide (ledler[]) saklanır ve for döngüsüyle sırayla yakılır.
+*/
+
+/*
   ak0185 — Dizi: pinler ardışık olmayınca kara şimşek
   Ne öğreneceğiz: dizi (array) — birden fazla değeri TEK bir isimde, sıra numarasıyla
     saklamak

@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 8 (kırmızı), 9 (sarı) ve 10 (yeşil) numaralı pinlerdeki LED'lerle trafik lambası yapar:
+  kırmızı 4 saniye, yeşil 3 saniye, sarı 1 saniye yanar ve bu sürekli tekrar eder.
+*/
+
+/*
   ak0070 — Trafik lambası
   Ne öğreneceğiz: Bildiğimiz üç LED'i bir trafik lambası işi için birlikte kullanmak;
     sürelerin kodun anlamını değiştirdiğini görmek

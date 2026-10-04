@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 8 ve 9 numaralı pinlerdeki iki LED'i sırayla yakar: biri yanarken öteki söner,
+  her 300 milisaniyede yer değiştirirler ve bu sürekli tekrar eder.
+*/
+
+/*
   ak0040 — İki LED sırayla
   Ne öğreneceğiz: Aynı programda iki ayrı pini birlikte yönetmek; biri yanarken
     diğerini sönük tutmak (zıt durum)

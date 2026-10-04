@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 8 numaralı pindeki LED'i 1 saniye yakıp 1 saniye söndürür. LED yanınca Seri Monitör'e
+  "YANDI", sönünce "SONDU" yazar.
+*/
+
+/*
   ak0110 — LED durumunu yaz
   Ne öğreneceğiz: Kartın, LED yanarken ve sönerken bilgisayara yazı gönderebildiğini görmek
   Malzeme: Arduino Uno kartı, USB kablosu, 1 LED, 1 adet 220 ohm direnç, breadboard,

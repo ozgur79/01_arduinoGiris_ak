@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 2 numaralı pindeki butona basılı tutulduğu sürece 6 numaralı pindeki LED'i yakar;
+  buton bırakılınca LED söner.
+*/
+
+/*
   ak0210 — Buton: INPUT, digitalRead, pull-down
   Ne öğreneceğiz: kart şimdiye kadar hep DIŞARI yazıyordu (OUTPUT); şimdi bir pin
     İÇERİYİ okuyor (INPUT) — digitalRead() bu pinin HIGH mi LOW mu olduğunu söyler

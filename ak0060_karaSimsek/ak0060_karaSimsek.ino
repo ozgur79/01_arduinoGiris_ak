@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 8, 9, 10, 11 numaralı pinlerdeki 4 LED'i tek tek yakarak ışığı soldan sağa, sonra geri
+  gönderir (kara şimşek). Her adım elle yazılmıştır; ileride bu kod çok kısalacak.
+*/
+
+/*
   ak0060 — Kara şimşek (elle)
   Ne öğreneceğiz: Dört LED'i sırayla yakıp söndürerek gidip gelen bir ışık deseni
     kurmak — ve bunu elle yazınca kodun ne kadar uzadığını görmek

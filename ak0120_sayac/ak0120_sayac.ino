@@ -1,4 +1,9 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, bir sayaç değişkenini her saniye 1 artırır ve değerini Seri Monitör'e yazar.
+*/
+
+/*
   ak0120 — Sayaç: kart saysın, ekrana yazsın
   Ne öğreneceğiz: Programı çalışırken değeri değişebilen bir isim — değişken — kullanmak
   Malzeme: Arduino Uno kartı, USB kablosu

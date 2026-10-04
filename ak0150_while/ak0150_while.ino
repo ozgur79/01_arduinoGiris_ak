@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, while döngüsüyle 1'den 10'a kadar sayar ve her sayıyı yarım saniye arayla
+  Seri Monitör'e yazar (ak0130'daki işin while ile yazılmış hâli).
+*/
+
+/*
   ak0150 — while: olduğu sürece say
   Ne öğreneceğiz: while döngüsü — ak0130'daki for'un tek satırda topladığı üç parçayı
     (başlangıç, koşul, artış) yeniden ayrı ayrı yazmak

@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, 8-11 numaralı pinlerdeki 4 LED'de kara şimşek efekti verir (ışık gidip gelir).
+  ak0060 ile aynı işi yapar ama for döngüsüyle çok daha kısa yazılmıştır.
+*/
+
+/*
   ak0140 — Kara şimşek, for ile (harcama dersi)
   Ne öğreneceğiz: Yeni fikir yok, bilerek — ak0060'ın uzun kodunu for ile kısaltmak
   Malzeme: Arduino Uno kartı, USB kablosu, 4 LED, 4 adet 220 ohm direnç, breadboard,

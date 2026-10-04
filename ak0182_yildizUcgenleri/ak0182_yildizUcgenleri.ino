@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, Seri Monitör'e önce 1'den 5 yıldıza büyüyen bir üçgen, boş bir satır, sonra
+  5'ten 1 yıldıza küçülen ters bir üçgen çizer.
+*/
+
+/*
   ak0182 — Yıldız üçgenleri: düz ve ters
   Ne öğreneceğiz: İç içe for'ta içteki döngünün sınırı SABİT olmak zorunda değil —
     dıştaki döngünün O ANKİ değerine BAĞLI olabilir (ak0180'de sabitti: sutun <= 5)

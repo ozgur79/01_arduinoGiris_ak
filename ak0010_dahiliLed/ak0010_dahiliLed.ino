@@ -1,4 +1,10 @@
 /*
+  BU KOD NE YAPAR?
+  Bu kod, kart üzerindeki dahili LED'i (13 numaralı pin) 1 saniye yakıp 1 saniye söndürür
+  ve bunu sürekli tekrar eder.
+*/
+
+/*
   ak0010 — Dahili LED'i yakıp söndür
   Ne öğreneceğiz: setup() bir kez çalışır, loop() sürekli tekrar eder;
     bir pini açıp kapatarak ve arada bekleyerek LED'i yakıp söndürürüz

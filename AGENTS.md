@@ -23,6 +23,11 @@ diğeri de **aynı oturumda** güncellenir.
 - Repo **public**: gerçek isim, e-posta, parola, token hiçbir dosyaya girmez.
 - **Hedef kitle 5. sınıf.** Ders başına tek yeni fikir; uzun yorum paragrafı yok; her ders
   gözle görülür fiziksel bir sonuç üretir.
+- **Her `.ino`'nun en başında "BU KOD NE YAPAR?" bloğu durur** (Özgür, 2026-10-04) —
+  başlık yorumundan ÖNCE, ayrı bir `/* */`: kodun ne yaptığı 2-3 satırda, pin numaralarıyla
+  ("2 numaralı pindeki butona basılınca 6 numaralı pindeki LED'i yakar..."). Bozuk kod
+  dosyalarında amaç yazılır, hata ele verilmez. Her yeni derste, her yeni `.ino`'da istisnasız.
+  `cozumler/` altındaki dosyalar bu kuralın dışındadır.
 - **Kara kutu kuralı:** Öğretilmeyen her yapı açıkça "kara kutu" olarak işaretlenir, hangi
   derste açılacağı yazılır **ve taksitle ödenir** — ders başına tek kutu, `.ino`'nun
   sonundaki `MERAK KÖŞESİ`nde. Sessizce geçilen hiçbir şey kalmaz, sonsuza kadar
