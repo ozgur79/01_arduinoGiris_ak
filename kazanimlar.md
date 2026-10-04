@@ -59,10 +59,25 @@ gerekçenin dayandığı örnek artık geçersiz, güncel durum bu paragrafta.
 | cpp.random | `random(alt, ust)` kartın alt (dahil) ile ust (hariç) arasında rastgele bir sayı seçmesini sağlar; üst sınır asla gelmez | ak0165 |
 | cpp.analogwrite | `analogWrite(pin, deger)` yalnız ~ işaretli pinlerde 0-255 arası bir değerle "arada" bir çıkış verir (PWM); `digitalWrite`'ın yalnız HIGH/LOW verebilmesinden farklıdır | ak0170 |
 | cpp.ic_ice_for | Bir `for` döngüsünün gövdesine ikinci bir `for` döngüsü konabilir; dıştaki bir kez ilerlerken içteki baştan sona çalışır | ak0180 |
+| cpp.for_degisken_sinir | İç içe bir `for`'da içteki döngünün üst sınırı sabit bir sayı olmak zorunda değildir, dıştaki döngünün o anki değerine bağlı olabilir (`sutun <= satir`) — üçgen desenlerin sırrı budur | ak0182 |
 | cpp.dizi | `const int dizi[n] = {...};` birden fazla değeri TEK bir isimde saklar; pinler ardışık olmadığında "ilk pin, son pin" kalıbı yetmez | ak0185 |
 | cpp.dizi_indeks | Dizi SIFIRDAN indekslenir: `dizi[0]` ilk eleman, `dizi[n-1]` son elemandır; `dizi[n]` diye bir eleman yoktur (kart hata vermeden rastgele davranabilir) | ak0185 |
 | cpp.millis | `millis()` kart açıldığından beri geçen milisaniyeyi döndürür; `delay()`'in aksine programı bekletmez, yalnızca zamanı okur | ak0195 |
 | cpp.unsigned_long | `unsigned long`, `millis()`'in döndürdüğü, `int`'ten çok daha büyük ve hep pozitif bir sayı türüdür; ayrıntısı ileri düzeyde açılacak | ak0195 |
-| cpp.digitalread | `digitalRead()` ile bir giriş pininin `HIGH` mi `LOW` mu olduğu okunur | dk0050 *(Deneyap — Ünite 2/`ak02xx` bu id'yi ak tarafında henüz üretmedi, dilim stratejisi gereği dk önce vardı)* |
-| cpp.if-else | `if (...) { }` koşul doğruysa çalışır, `else { }` yanlışsa çalışır — karar dallanması | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
-| hw.buton-devre | Butonu breadboard üzerinde giriş pinine bağlama; basılı/basılı değil iki durumu `digitalRead` ile ayırt etme | dk0050 *(Deneyap — bkz. yukarıdaki not)* |
+| cpp.serial_read | `Serial.read()` seri portun tamponunda bekleyen bir harfi okur; `Serial.available()` önce okunacak bir şey olup olmadığını sorar — seri port burada ilk kez İKİ YÖNLÜ çalışır | ak0197 |
+| cpp.char | `char`, tek bir karakter saklayan bir kutu türüdür; `'1'` (tek tırnak) bir `char`, `"1"` (çift tırnak) bir yazıdır (String) — ikisi asla eşit çıkmaz | ak0197 |
+| cpp.hata_ayiklama_seri | Şüpheli bir değişkenin yanına `Serial.println(degisken);` koyup ekrandaki değeri BEKLENEN değerle karşılaştırarak kodda hatanın nerede olduğunu bulma yöntemi — tahmin değil, ölçüm | ak0199 |
+| cpp.digitalread | `digitalRead()` ile bir giriş pininin `HIGH` mi `LOW` mu olduğu okunur | ak0210 (ak, teste hazır) / dk0050 (Deneyap, önce vardı) |
+| cpp.if-else | `if (...) { }` koşul doğruysa çalışır, `else { }` yanlışsa çalışır — karar dallanması | ak0220 (ak, teste hazır) / dk0050 (Deneyap, önce vardı) |
+| hw.buton-devre | Butonu breadboard üzerinde giriş pinine bağlama; basılı/basılı değil iki durumu `digitalRead` ile ayırt etme | ak0210 (ak, teste hazır) / dk0050 (Deneyap, önce vardı) |
+| hw.pull-down | 10 kΩ pull-down direnç, buton basılı değilken pini GND'ye çekip kesin `LOW` okumasını sağlar; direnç yoksa pin "havada kalır" ve rastgele okuyabilir | ak0210 |
+| cpp.while_bekleme | `while (koşul) { }` boş gövdeyle "koşul bozulana kadar bekle" kalıbı: ak0215'te butona BASILANA kadar, ak0250'de butonun BIRAKILANA kadar | ak0215 |
+| cpp.ve_operatoru | `&&` ("ve"): iki koşulun İKİSİ de doğruysa sonuç doğru | ak0230 |
+| cpp.veya_operatoru | `\|\|` ("veya"): iki koşuldan en az biri doğruysa sonuç doğru (ak0230 SEN YAP 2'de tek cümleyle açılır) | ak0230 |
+| cpp.delay_kor | `delay()` sırasında kart başka hiçbir şey yapmaz, butonu da okumaz; çaresi `millis()` (Ünite 3) | ak0240 |
+| hw.buton_sicrama | Mekanik bir butonun kontakları basılıp bırakılırken çok kısa süre sekebilir ("sıçrama"); `delay(100)` basit bir geçiştirme, asıl çözüm Ünite 3 (debounce) | ak0250 |
+| cpp.esit_esit_atama | `=` atama yapar, `==` karşılaştırır; `if (x = HIGH)` değişkeni ezer ve hep doğru olur | ak0299 |
+| cpp.loop_hizi | `loop()` saniyede çok kez döner; bir butona tek basış yüzlerce tur sürer, bu yüzden "buton HIGH ise say" bir basışı çok kez sayar | ak0310 |
+| cpp.kenar_tetikleme | Bir önceki durumu (`sonDurum`) saklayıp şimdiki durumla karşılaştırarak değişimi yakalama: yükselen kenar `durum == HIGH && sonDurum == LOW`, düşen kenar tersi | ak0320 |
+| cpp.debounce | Buton sıçramasını geçirmek için kenar yakalanınca kısa bir `delay`; çok kısa yetmeyebilir, çok uzun hızlı basışı kaçırır | ak0330 |
+| cpp.else_if | `if (A) { } else if (B) { }`: A yanlışsa B'ye bak; ikisi aynı anda doğru olamadığında iki olayı tek zincirde ayırır | ak0340 |

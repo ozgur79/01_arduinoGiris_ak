@@ -76,11 +76,28 @@ O yüzden listedeki bir şeyi anlamıyorsan bu normaldir, sırası gelecek.
 | 16 | `ak0165_rastgeleKaraSimsek` | `random()` ile kartın rastgele bir LED seçmesi | yayında |
 | 17 | `ak0170_nefesAlanLed` | `analogWrite` (PWM) ile yavaşça parlayıp sönen LED | yayında |
 | 18 | `ak0180_yildizKaresi` | İç içe `for` ile ekrana yıldız karesi çizme | yayında |
-| 19 | `ak0185_dizi` | Dizi ile pinler ardışık olmayınca kara şimşek kurma | yayında |
-| 20 | `ak0190_binarySayici` | Dizi + `if` + `%` ile LED'lerin ikilik saydığını görme | yayında |
-| 21 | `ak0195_millisIlkTur` | `millis()` ile iki LED'i bağımsız hızlarda yakma | yayında |
+| 19 | `ak0182_yildizUcgenleri` | İç içe `for` ile düz ve ters yıldız üçgeni çizme | teste hazır |
+| 20 | `ak0185_dizi` | Dizi ile pinler ardışık olmayınca kara şimşek kurma | yayında |
+| 21 | `ak0190_binarySayici` | Dizi + `if` + `%` ile LED'lerin ikilik saydığını görme | yayında |
+| 22 | `ak0195_millisIlkTur` | `millis()` ile iki LED'i bağımsız hızlarda yakma | yayında |
+| 23 | `ak0197_serialOkuma` | `Serial.read` ile klavyeden komut gönderip LED yakma | teste hazır |
+| 24 | `ak0199_bozukKoduOnar` | Bozuk kodu `Serial.println` ile hata ayıklayıp onarma (Ünite 1 kapanışı) | teste hazır |
+| 25 | `ak0210_butonOku` | Butonu `INPUT` ve `digitalRead` ile okuyup LED yakma (pull-down direnç) | teste hazır |
+| 26 | `ak0215_baslatButonu` | Butona basılana kadar bekleyip kara şimşeği başlatma | teste hazır |
+| 27 | `ak0220_ifElse` | `else` ile "basınca yan, bırakınca sön" kararını tek yerde verme | teste hazır |
+| 28 | `ak0230_ikiButon` | İki butona birden basınca yanan LED (`&&`) | teste hazır |
+| 29 | `ak0240_zamanliTepki` | Butona basınca LED'in 2 saniye yanması | teste hazır |
+| 30 | `ak0250_yakSondur` | Biri yakan, biri söndüren iki buton | teste hazır |
+| 31 | `ak0260_refleksOyunu` | İki oyunculu refleks oyunu (Ünite 2 kapanışı) | teste hazır |
+| 32 | `ak0299_bozukKoduOnar` | Buton kodlarındaki hataları bulup onarma (Ünite 2 kapanışı) | teste hazır |
+| 33 | `ak0310_sayacKaciyor` | Buton sayacının neden çok saydığını görüp düzeltme | teste hazır |
+| 34 | `ak0320_kenarTetikleme` | Butonun yeni basıldığı anı beklemeden yakalama | teste hazır |
+| 35 | `ak0330_butonlaBinary` | Butonla ilerleyen binary sayıcı ve buton sıçraması | teste hazır |
+| 36 | `ak0340_bastiBirakti` | `else if` ile basma ve bırakmayı ayırma | teste hazır |
 
 Bu tablo her yeni ders eklendiğinde güncellenir. "Sırada ne var" diye buraya bak.
 LED bloğu yedi derste tamamlandı. Seri port bloğunda kartın yaptığı işi bilgisayara
-yazdırmaya başladık; döngüler, ilk dallanma (`if`), rastgelelik, PWM, dizi ve `millis()`
-geldi, sırada buton var.
+yazdırmaya başladık; döngüler, ilk dallanma (`if`), rastgelelik, PWM, dizi, `millis()`,
+iki yönlü seri port ve hata ayıklama geldi. Buton bloğunda (Ünite 2) kart ilk kez
+dışarıyı dinliyor: `INPUT`, `digitalRead`, `else`, `&&`, bir refleks oyunu ve yine bir
+hata avı var. Ünite 3 başladı: buton ve seri port birlikte (kenar tetikleme, sıçrama, `else if`). Sırada tek butonla yak/söndür ve `millis()`.
